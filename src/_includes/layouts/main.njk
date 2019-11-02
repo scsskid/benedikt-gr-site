@@ -5,11 +5,9 @@ layout: layouts/base.njk
 	<p class="site-branding"><b>BG</b></p>
 	{{ content | safe }}
 	
-	<div class="availability">
-		<p>{{ site.availability.status }}</p>
-		
-		<p>{{ site.availability.text  }}</p>
-		<p>{{ site.availability.date  }}</>
-		123
+	{% set av = site.availability %}
+	<div class="availability{{ " availability--true" if av.status }}">
+		<p>{{ av.text  }}</p>
+		<p>{{ av.date  }}</>
 	</div>
 </div>
