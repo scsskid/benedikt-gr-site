@@ -1,44 +1,43 @@
 {
-	"name": "2020.benedikt",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"@11ty/eleventy": "^0.9.0"
-	},
-	"dependencies": {
-		"moment": "^2.24.0",
-		"prettier-stylelint": "^0.4.2",
-		"stylelint": "^11.1.1",
-		"stylelint-config-standard": "^19.0.0"
-	},
-	"stylelint": {
-		"extends": [
-			"stylelint-config-standard",
-			"./node_modules/prettier-stylelint/config.js"
-		],
-		"rules": {
-			"at-rule-no-unknown": [
-				true,
-				{
-					"ignoreAtRules": [
-						"mixin",
-						"define-mixin",
-						"media",
-						"import",
-						"custom-selector",
-						"custom-media",
-						"font-face",
-						"import-sanitize"
-					]
-				}
-			],
-			"block-no-empty": null,
-			"no-duplicate-selectors": null
-		}
-	}
+  "name": "2020.benedikt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "moment": "^2.24.0",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^11.1.1",
+    "stylelint-config-standard": "^19.0.0"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "./node_modules/prettier-stylelint/config.js"
+    ],
+    "rules": {
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "mixin",
+            "define-mixin",
+            "media",
+            "import",
+            "custom-selector",
+            "custom-media",
+            "font-face",
+            "import-sanitize"
+          ]
+        }
+      ],
+      "block-no-empty": null,
+      "no-duplicate-selectors": null
+    }
+  }
 }
