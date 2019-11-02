@@ -1,7 +1,8 @@
 {
   "name": "2020-benedikt",
   "version": "0.1.0",
-  "description": "",
+  "description": "Benedikt Gregors Website",
+  "repository": "https://github.com/scsskid/2020-benedikt",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
@@ -22,6 +23,7 @@
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",
     "cssnano": "^4.1.10",
+    "modern-normalize": "^0.5.0",
     "moment": "^2.24.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.21",
