@@ -1,0 +1,15 @@
+{
+ "port": 4000,
+ "serve": "dist",
+ "bind": "0.0.0.0",
+ "delay": 100,
+ "quiet": true,
+ "watchexps": [
+    "src/assets/js/**/*.js # npm run scripts:dev",
+    "src/assets/css/**/*.css # # reloadcss",
+    "dist/**/*.html",
+    "src/images/"
+ ],
+ "http2": false,
+ "open": false
+}
