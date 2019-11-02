@@ -1,0 +1,8 @@
+---
+layout: layouts/base.njk
+---
+{{ content | safe }}
+{% set av = site.availability %}
+<div class="availability{{ " availability--true" if av.status }}">
+	<p>{{ av.text }} / Status Date: {{ av.date }}</p>
+</div>	

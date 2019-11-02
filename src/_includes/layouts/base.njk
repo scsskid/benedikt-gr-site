@@ -13,11 +13,11 @@
   <link rel="stylesheet" href="https://use.typekit.net/itz0kxv.css">	
 </head>
 <body id="top" itemscope itemtype="http://schema.org/WebPage">
-  <div class="page">
-    <p class="site-branding"><b>BG</b></p>
+  <div class="site-content | hPad">
+    <p class="site-branding"><b><a href="/">BG</a></b></p>
     {{ content | safe }}
-    {% include "layouts/_footer.njk" %}
   </div>
+  {% include "layouts/_footer.njk" %}
   <script src="/scripts/index.js"></script>
 </body>
 </html>

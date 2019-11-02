@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Colors --------------- */
 
 :root {
@@ -13,13 +17,20 @@ body {
   --b: ;
 }
 
+.site-branding a {
+  color: var(--color-text);
+}
+
 /* Typograhpy ----------- */
+
+html {
+  font-size: 1.2em;
+}
 
 body {
   font-family: niveau-grotesk, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
-  font-size: 1.4rem;
   line-height: calc(24 / 16);
   color: var(--color-text);
   background: var(--color-background-light);
@@ -30,16 +41,40 @@ p {
   margin-bottom: 1rem;
 }
 
+h1,
+h2,
+h3 {
+  font-size: 1rem;
+}
+
 /* Layout ----------- */
 
-.page {
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.site-content {
   padding-top: 2rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   padding-bottom: 2rem;
   max-width: 30rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hPad {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.site-footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 @media (min-width: 30rem) {
