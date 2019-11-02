@@ -7,4 +7,4 @@ I'm Benedikt, a Web Developer based in Berlin, Germany. While digging modern dev
 
 I'm looking for working and learning from each other in teams. Also I call myself well experienced in creating visual designs and applying to the web for all devices.
 
-I want to stay updated on trends constantly but don't get trapped by them. 🤷‍♂️
+Always updated on trends but never trapped by them. 🤷‍♂️
