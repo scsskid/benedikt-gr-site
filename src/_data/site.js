@@ -15,6 +15,6 @@ module.exports = {
   availability: {
     status: true,
     text: "available for projects",
-    date: "november 2019"
+    date: "November 2019"
   }
 };

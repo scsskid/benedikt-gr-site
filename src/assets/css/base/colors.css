@@ -1,0 +1,16 @@
+/* Colors --------------- */
+
+:root {
+  --hue-main: 120;
+  --color-text: hsl(var(--hue-main), 10%, 20%);
+  --color-background-light: hsl(var(--hue-main), 51%, 98.5%);
+}
+
+.site-branding a {
+  color: var(--color-text);
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-background-light);
+}

@@ -6,7 +6,7 @@
  "quiet": true,
  "watchexps": [
     "src/assets/js/**/*.js # npm run scripts:dev",
-    "src/assets/css/**/*.css # # reloadcss",
+    "src/assets/css/**/*.css # npm run styles:dev # reloadcss",
     "dist/**/*.html",
     "src/images/"
  ],
