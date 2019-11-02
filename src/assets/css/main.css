@@ -2,41 +2,4 @@
 @import "base/global.css";
 @import "base/typography.css";
 @import "base/colors.css";
-
-/* Layout ----------- */
-
-html {
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
-}
-
-.site-content {
-  width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 0;
-  max-width: 30rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hPad {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.site-footer {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  padding-bottom: 2rem;
-}
-
-@media (min-width: 30rem) {
-  .page {
-    padding-top: 4rem;
-  }
-}
+@import "base/layout.css";
