@@ -13,7 +13,20 @@
   <link rel="stylesheet" href="https://use.typekit.net/itz0kxv.css">	
 </head>
 <body id="top" itemscope itemtype="http://schema.org/WebPage">
-  {{ content | safe }}
+  <div class="page">
+    <p class="site-branding"><b>BG</b></p>
+    {% set av = site.availability %}
+
+    {{ content | safe }}
+    <footer class="main-footer">
+      <div class="availability{{ " availability--true" if av.status }}">
+        <p>{{ av.text }} / Status Date: {{ av.date }}</p>
+        
+      </div>
+      
+      <p><small>Made with 🍄 in Berlin, Germany</small></p>
+    </footer>
+  </div>
   <script src="/scripts/index.js"></script>
 </body>
 </html>
