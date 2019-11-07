@@ -9,7 +9,7 @@
   <meta name="description" content="{{ renderData.description or description or metadata.description }}">
   <title>{{ renderData.title or title or metadata.title }}</title>
   {# <link rel="stylesheet" href="/styles/index.css"> #}
-  <link rel="stylesheet" href="/assets/css/styles.css?ref={{ site.buildTime.getTime() }}">
+  <link rel="stylesheet" href="assets/css/styles.css?ref={{ site.buildTime.getTime() }}">
   <link rel="stylesheet" href="https://use.typekit.net/itz0kxv.css">	
 </head>
 <body id="top" itemscope itemtype="http://schema.org/WebPage">
@@ -18,6 +18,6 @@
     {{ content | safe }}
   </div>
   {% include "layouts/_footer.njk" %}
-  <script src="/scripts/index.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
