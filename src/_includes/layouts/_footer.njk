@@ -1,11 +1,12 @@
 <footer class="site-footer | hPad">
-	<span class="color-scheme-toggle" role="group" title="select a color scheme">
+	<div class="color-scheme-toggle" role="group" title="select a color scheme">
 	( palette icon )
 		<input type="radio" name="scheme" value="dark" aria-label="dark color scheme">
 		<input type="radio" name="scheme" value="system" aria-label="system color scheme" checked="">
 		<input type="radio" name="scheme" value="light" aria-label="light color scheme"><label></label>
-	</span>
+	</div>
 	
-	<p>Made with 🍄in Berlin, Germany.<br>Site generated with 11ty.io<br>on {{ site.buildTimeString }}<br>
-	<a href="/legal/">Legal Information</a></p>
-</footer>
+	<p>Made with 🍄in Berlin, Germany · <a href="/legal/">Legal Information</a><br>Generated with 11ty.io · Last Update: {{ site.buildTimeString }}<br>
+	</p>
+	
+</footer> 
