@@ -13,7 +13,7 @@
     --color-text: hsl(var(--hue-main), 5%, 60%);
     --color-text--high-contrast: hsl(var(--hue-main), 10%, 80%);
     --color-link: hsl(var(--hue-main), 60%, 60%);
-    --color-background: hsl(var(--hue-main), 10%, 8.5%);
+    --color-background: hsl(var(--hue-main), 10%, 12.5%);
   }
 }
 
