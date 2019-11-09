@@ -1,3 +1,12 @@
 <footer class="site-footer | hPad">
-	<p><small>Made with 🍄in Berlin, Germany | <a href="/legal/">Legal Information</a></small></p>
-</footer>
+	<div class="color-scheme-toggle" role="group" title="select a color scheme">
+	( palette icon )
+		<input type="radio" name="scheme" value="dark" aria-label="dark color scheme">
+		<input type="radio" name="scheme" value="system" aria-label="system color scheme" checked="">
+		<input type="radio" name="scheme" value="light" aria-label="light color scheme"><label></label>
+	</div>
+	
+	<p>Made with 🍄in Berlin, Germany · <a href="/legal/">Legal Information</a><br>Generated with 11ty.io · Last Update: {{ site.buildTimeString }}<br>
+	</p>
+	
+</footer> 
