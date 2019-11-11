@@ -8,7 +8,7 @@
     "clean": "rm -rf dist",
     "eleventy:default": "npx eleventy",
     "eleventy:watch": "npx eleventy --watch",
-    "styles:prod": "postcss ./src/assets/css/*.css --output ./dist/assets/css/styles.css --env 'production'",
+    "styles:prod": "postcss ./src/assets/css/*.css --output ./dist/assets/css/styles.css --no-map --env 'production'",
     "styles:dev": "postcss ./src/assets/css/*.css --output ./dist/assets/css/styles.css --map",
     "serve": "light-server -c .lightserverrc",
     "dev": "npm-run-all clean styles:dev eleventy:default --parallel eleventy:watch serve --print-label",
