@@ -20,11 +20,15 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "light-server": "^2.6.4"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",
     "cssnano": "^4.1.10",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
     "modern-normalize": "^0.5.0",
     "moment": "^2.24.0",
     "npm-run-all": "^4.1.5",
@@ -35,6 +39,31 @@
     "prettier-stylelint": "^0.4.2",
     "stylelint": "^11.1.1",
     "stylelint-config-standard": "^19.0.0"
+  },
+  "prettier": {
+    "parser": "babel",
+    "useTabs": false,
+    "printWidth": 120,
+    "singleQuote": true,
+    "semi": false
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true,
+      "browser": true,
+      "es6": true
+    },
+    "rules": {},
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "plugins": [
+      "json"
+    ]
   },
   "stylelint": {
     "extends": [
