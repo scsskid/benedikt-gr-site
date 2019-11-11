@@ -12,10 +12,14 @@ export default () => {
 
   function saveColorTheme(colorTheme) {
     if ('system' === colorTheme) {
-      localStorage.removeItem('color-theme')
+      removeColorThemeLocalStorage()
       return
     }
     localStorage.setItem('color-theme', colorTheme)
+  }
+
+  function removeColorThemeLocalStorage() {
+    localStorage.removeItem('color-theme')
   }
 
   function applyColorTheme() {
@@ -35,8 +39,14 @@ export default () => {
       }
 
       el.addEventListener('change', () => {
-        saveColorTheme(el.value)
-        applyColorTheme(el.value)
+        if ('system' !== el.value) {
+          saveColorTheme(el.value)
+          applyColorTheme(el.value)
+        } else {
+          removeColorThemeLocalStorage()
+          document.documentElement.removeAttribute('data-color-theme')
+        }
+
         readOutTheme()
       })
     })
