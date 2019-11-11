@@ -14,6 +14,8 @@ html {
 
 @media (prefers-color-scheme: dark) {
   html {
+    -webkit-font-smoothing: antialiased;
+
     --color-text: hsl(var(--hue-main), 5%, 60%);
     --color-text--high-contrast: hsl(var(--hue-main), 10%, 80%);
     --color-link: hsl(var(--hue-main), 60%, 60%);
@@ -22,14 +24,15 @@ html {
 }
 
 [data-color-theme='dark'] {
-  --color-text: hsl(var(--hue-main), 5%, 60%) !important;
+  -webkit-font-smoothing: antialiased;
+
+  --color-text: hsl(var(--hue-main), 5%, 75%);
   --color-text--high-contrast: hsl(var(--hue-main), 10%, 80%);
   --color-link: hsl(var(--hue-main), 60%, 60%);
   --color-background: hsl(var(--hue-main), 10%, 12.5%);
 }
 
 [data-color-theme='light'] {
-  --hue-main: 220;
   --color-text: hsl(var(--hue-main), 10%, 25%);
   --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
   --color-link: hsl(var(--hue-main), 40%, 30%);
