@@ -11,7 +11,6 @@ export default () => {
   }
 
   function saveColorTheme(colorTheme) {
-    console.log('saving to local storage: ' + colorTheme)
     if ('system' === colorTheme) {
       localStorage.removeItem('color-theme')
       return
@@ -28,9 +27,6 @@ export default () => {
 
   applyColorTheme()
 
-  console.log('system color theme: ' + getColorThemeSystemPreference())
-  console.log('local storage setting: ' + localStorage.getItem('color-theme'))
-
   function themeSwitchHandler() {
     const themeSwitches = document.querySelectorAll('.color-scheme-toggle input')
     themeSwitches.forEach(el => {
@@ -39,8 +35,6 @@ export default () => {
       }
 
       el.addEventListener('change', () => {
-        console.log('switch change theme setting: ' + el.value)
-
         saveColorTheme(el.value)
         applyColorTheme(el.value)
         readOutTheme()
