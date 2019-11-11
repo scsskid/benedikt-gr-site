@@ -1,15 +1,19 @@
 /* Colors --------------- */
-
 html {
   --hue-main: 220;
-  --color-text: hsl(var(--hue-main), 10%, 25%);
-  --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
-  --color-link: hsl(var(--hue-main), 40%, 30%);
-  --color-background: hsl(var(--hue-main), 51%, 98.5%);
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    --color-text: hsl(var(--hue-main), 10%, 25%);
+    --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
+    --color-link: hsl(var(--hue-main), 40%, 30%);
+    --color-background: hsl(var(--hue-main), 51%, 98.5%);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-  html.no-js {
+  html {
     --color-text: hsl(var(--hue-main), 5%, 60%);
     --color-text--high-contrast: hsl(var(--hue-main), 10%, 80%);
     --color-link: hsl(var(--hue-main), 60%, 60%);
@@ -18,20 +22,18 @@ html {
 }
 
 [data-color-theme='dark'] {
-  --color-text: hsl(var(--hue-main), 5%, 60%);
+  --color-text: hsl(var(--hue-main), 5%, 60%) !important;
   --color-text--high-contrast: hsl(var(--hue-main), 10%, 80%);
   --color-link: hsl(var(--hue-main), 60%, 60%);
   --color-background: hsl(var(--hue-main), 10%, 12.5%);
 }
 
-html {
-  content: 'color-theme-light';
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    content: 'color-theme-dark';
-  }
+[data-color-theme='light'] {
+  --hue-main: 220;
+  --color-text: hsl(var(--hue-main), 10%, 25%);
+  --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
+  --color-link: hsl(var(--hue-main), 40%, 30%);
+  --color-background: hsl(var(--hue-main), 51%, 98.5%);
 }
 
 body {
