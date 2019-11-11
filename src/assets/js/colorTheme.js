@@ -50,11 +50,18 @@ export default () => {
       : 'not set'
   }
 
-  var theme_OS = window.matchMedia('(prefers-color-scheme: light)')
-  theme_OS.addEventListener('change', function(e) {
+  const mql = window.matchMedia('(prefers-color-scheme: dark)')
+
+  function colorThemeTest() {
     applyColorTheme()
     readOutTheme()
-  })
+  }
+  mql.addListener(colorThemeTest)
+  // Future Syntax
+  // mql.addEventListener('change', e => {
+  //   applyColorTheme()
+  //   readOutTheme()
+  // })
 
   readOutTheme()
 }
