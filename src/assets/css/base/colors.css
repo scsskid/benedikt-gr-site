@@ -8,7 +8,8 @@
   --color-background: hsl(var(--hue-main), 51%, 98.5%);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) { */
+@media (prefers-color-scheme: dark), [data-theme = "dark"] {
   :root {
     --color-text: hsl(var(--hue-main), 5%, 60%);
     --color-text--high-contrast: hsl(var(--hue-main), 10%, 80%);
