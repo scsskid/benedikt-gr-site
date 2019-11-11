@@ -12,7 +12,8 @@
     "styles:dev": "postcss ./src/assets/css/*.css --output ./dist/assets/css/styles.css --map",
     "serve": "light-server -c .lightserverrc",
     "dev": "npm-run-all clean styles:dev eleventy:default --parallel eleventy:watch serve --print-label",
-    "dev:debug": "DEBUG=* npm run dev"
+    "dev:debug": "DEBUG=* npm run dev",
+    "production": "npm-run-all clean styles:prod eleventy:default"
   },
   "keywords": [],
   "author": "",
