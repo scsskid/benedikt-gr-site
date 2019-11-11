@@ -13,7 +13,7 @@
     "serve": "light-server -c .lightserverrc",
     "dev": "npm-run-all clean styles:dev eleventy:default --parallel eleventy:watch serve --print-label",
     "dev:debug": "DEBUG=* npm run dev",
-    "build": "npm-run-all clean styles:prod eleventy:default --parallel"
+    "production": "npm-run-all clean styles:prod eleventy:default --parallel"
   },
   "keywords": [],
   "author": "",
