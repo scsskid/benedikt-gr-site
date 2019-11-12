@@ -1,0 +1,18 @@
+.social-links-list {
+  display: flex;
+}
+
+.social-links-list svg {
+  width: auto;
+  height: calc(8 * var(--b));
+}
+
+.social-links-list {
+  & a path {
+    fill: var(--color-text);
+  }
+
+  & a:hover path {
+    fill: var(--color-text--high-contrast);
+  }
+}
