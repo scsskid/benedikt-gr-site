@@ -24,6 +24,7 @@ export default () => {
 
   function applyColorTheme() {
     let localStorageColorTheme = localStorage.getItem('color-theme')
+    // console.log(localStorageColorTheme)
     let colorTheme = localStorageColorTheme ? localStorageColorTheme : getColorThemeSystemPreference()
 
     document.documentElement.setAttribute('data-color-theme', colorTheme)
@@ -38,6 +39,7 @@ export default () => {
 
       el.addEventListener('change', () => {
         if ('system' !== el.value) {
+          console.log(el.value)
           saveColorTheme(el.value)
           applyColorTheme(el.value)
         } else {

@@ -1,2 +1,2 @@
-import colorTheme from './colorTheme.js'
-colorTheme()
+import colorThemeToggles from './color-theme-toggles.js'
+colorThemeToggles()
