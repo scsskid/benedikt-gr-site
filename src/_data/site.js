@@ -2,6 +2,10 @@ module.exports = {
   title: 'Benedikt Gregors Website',
   description: '',
   url: 'https://benedikt.gr',
+  urls: {
+    github: 'https://github.com/scsskid/',
+    linkedin: 'https://www.linkedin.com/in/scsskid/'
+  },
   baseUrl: '/',
   author: 'Name Surname',
   authorTwitterUrl: 'https://twitter.com/scsskid',
@@ -16,5 +20,8 @@ module.exports = {
     status: true,
     text: 'available',
     date: 'Jan 2020'
+  },
+  dirs: {
+    icons: '/src/assets/images/icons/'
   }
 }

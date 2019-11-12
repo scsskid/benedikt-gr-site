@@ -11,7 +11,7 @@
     "styles:prod": "postcss ./src/assets/css/*.css --output ./dist/assets/css/styles.css --no-map --env 'production'",
     "styles:dev": "postcss ./src/assets/css/*.css --output ./dist/assets/css/styles.css --map",
     "serve": "light-server -c .lightserverrc",
-    "start": "npm-run-all clean styles:dev eleventy:default --parallel eleventy:watch serve --print-label",
+    "start": "BROWSERSLIST_ENV=modern npm-run-all clean styles:dev eleventy:default --parallel eleventy:watch serve --print-label",
     "start:debug": "DEBUG=* npm run start",
     "production": "npm-run-all clean styles:prod eleventy:default"
   },
@@ -27,8 +27,10 @@
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",
     "cssnano": "^4.1.10",
+    "eleventy-plugin-svg-contents": "^0.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.5.0",
+    "ionicons": "^4.6.3",
     "modern-normalize": "^0.5.0",
     "moment": "^2.24.0",
     "npm-run-all": "^4.1.5",
@@ -41,6 +43,16 @@
     "prettier-stylelint": "^0.4.2",
     "stylelint": "^11.1.1",
     "stylelint-config-standard": "^19.0.0"
+  },
+  "browserslist": {
+    "production": [
+      "> 0.5%",
+      "ie 11"
+    ],
+    "modern": [
+      "last 1 chrome version",
+      "last 1 firefox version"
+    ]
   },
   "prettier": {
     "parser": "babel",
