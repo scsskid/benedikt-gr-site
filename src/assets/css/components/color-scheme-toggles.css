@@ -1,0 +1,38 @@
+.color-scheme-toggles {
+  & input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  & label {
+    font-size: calc(var(--ms-neg-2) * 1rem);
+
+    /* line-height: calc(60 * var(--b)); */
+    box-shadow: 0 0 0 1px var(--color-text);
+    height: calc(4 * var(--b));
+    display: inline-flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+
+  & :checked + label {
+    font-weight: bold;
+  }
+}
+
+.color-scheme-toggles-list {
+  display: flex;
+
+  & > li {
+    margin-right: 0.4rem;
+  }
+
+  & > li:last-child {
+    margin-right: 0;
+  }
+}

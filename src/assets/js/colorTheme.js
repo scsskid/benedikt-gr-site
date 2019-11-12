@@ -30,7 +30,7 @@ export default () => {
   }
 
   function themeSwitchHandler() {
-    const themeSwitches = document.querySelectorAll('.color-scheme-toggle input')
+    const themeSwitches = document.querySelectorAll('[data-color-theme-toggle]')
     themeSwitches.forEach(el => {
       if (el.value === localStorage.getItem('color-theme')) {
         el.checked = true
