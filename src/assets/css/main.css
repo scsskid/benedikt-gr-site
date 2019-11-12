@@ -1,5 +1,6 @@
 @import '../../../node_modules/modern-normalize/modern-normalize.css';
 @import 'base/global.css';
+@import 'base/aria.css';
 @import 'base/typography.css';
 @import 'base/colors.css';
 @import 'base/layout.css';

@@ -1,3 +1,7 @@
 .site-footer .color-scheme-toggle {
   margin-bottom: 1rem;
 }
+
+.site-footer p {
+  margin-bottom: 0;
+}

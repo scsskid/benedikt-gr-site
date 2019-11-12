@@ -46,7 +46,8 @@ a {
   color: var(--color-link);
 }
 
-b {
+b,
+strong {
   color: var(--color-text--high-contrast);
 }
 
