@@ -25,6 +25,10 @@
   }
 }
 
+.color-scheme-toggles-title {
+  margin-bottom: var(--b);
+}
+
 .color-scheme-toggles-list {
   display: flex;
 
