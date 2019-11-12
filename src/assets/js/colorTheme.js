@@ -29,8 +29,6 @@ export default () => {
     document.documentElement.setAttribute('data-color-theme', colorTheme)
   }
 
-  applyColorTheme()
-
   function themeSwitchHandler() {
     const themeSwitches = document.querySelectorAll('.color-scheme-toggle input')
     themeSwitches.forEach(el => {
@@ -46,12 +44,9 @@ export default () => {
           removeColorThemeLocalStorage()
           document.documentElement.removeAttribute('data-color-theme')
         }
-
-        readOutTheme()
       })
     })
   }
-  themeSwitchHandler()
 
   function readOutTheme() {
     let setting = localStorage.getItem('color-theme')
@@ -64,7 +59,6 @@ export default () => {
 
   function colorThemeTest() {
     applyColorTheme()
-    readOutTheme()
   }
   mql.addListener(colorThemeTest)
   // Future Syntax
@@ -73,5 +67,6 @@ export default () => {
   //   readOutTheme()
   // })
 
-  readOutTheme()
+  themeSwitchHandler()
+  applyColorTheme()
 }
