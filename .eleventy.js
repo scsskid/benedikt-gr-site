@@ -26,15 +26,13 @@ const md = markdownIt(markdownItConfig)
   .use(markdownItAnchor, markdownItAnchorConfig)
 
 module.exports = function(eleventyConfig) {
-  // eleventyConfig.addPassthroughCopy('src/assets/images')
-  eleventyConfig.addPassthroughCopy('src/assets/js')
+  eleventyConfig.addPassthroughCopy('src/_assets/js')
   eleventyConfig.addPassthroughCopy('src/.htaccess')
 
   eleventyConfig.addPlugin(svgContents)
-  eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
 
-  eleventyConfig.addCollection('posts', collection => {
-    return collection.getFilteredByGlob('src/blog/*.md').sort((a, b) => b.date - a.date)
+  eleventyConfig.addCollection('notes', collection => {
+    return collection.getFilteredByGlob('src/notes/*.md').sort((a, b) => b.date - a.date)
   })
 
   eleventyConfig.addFilter('markdown', string => {

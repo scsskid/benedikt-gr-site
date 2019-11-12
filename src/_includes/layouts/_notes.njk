@@ -1,12 +1,12 @@
 
 <ol class="ui-list">
-{% set posts = collections.posts %}
+{% set posts = collections.notes %}
 {% for post in posts %}
   <li>
     <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-    {% for tag in post.data.tags %}
+    {# {% for tag in post.data.tags %}
       <a href="/blog/tags/{{ tag | slug }}" class="tag">{{ tag }}</a>
-    {% endfor %}
+    {% endfor %} #}
     <h1><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title | markdown | safe }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h1>
   </li>
 {%endfor%}
