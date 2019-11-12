@@ -3,7 +3,7 @@ layout: layouts/home.njk
 permalink: "/"
 ---
 
-Hello, I'm __Benedikt__, a web developer based in Berlin, Germany. While digging modern development workflows, I try to avoid complexity and bloat.
+Hi, I'm __Benedikt__, a web developer based in Berlin, Germany. While digging modern development workflows, I try to avoid complexity and bloat.
 
 Working and learning from each other in teams is something I value very much.
 
