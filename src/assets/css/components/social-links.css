@@ -1,13 +1,22 @@
 .social-links-list {
   display: flex;
+  align-items: center;
 }
 
 .social-links-list svg {
   width: auto;
-  height: calc(8 * var(--b));
+  height: calc(6 * var(--b));
 }
 
 .social-links-list {
+  & li {
+    margin-left: 0.25rem;
+  }
+
+  & a {
+    display: block;
+  }
+
   & a path {
     fill: var(--color-text);
   }
