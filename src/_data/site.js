@@ -16,5 +16,8 @@ module.exports = {
     status: true,
     text: 'available',
     date: 'Jan 2020'
+  },
+  dirs: {
+    icons: '/src/assets/images/icons/'
   }
 }
