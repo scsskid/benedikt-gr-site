@@ -1,5 +1,7 @@
-@import "../../../node_modules/modern-normalize/modern-normalize.css";
-@import "base/global.css";
-@import "base/typography.css";
-@import "base/colors.css";
-@import "base/layout.css";
+@import '../../../node_modules/modern-normalize/modern-normalize.css';
+@import 'base/global.css';
+@import 'base/typography.css';
+@import 'base/colors.css';
+@import 'base/layout.css';
+@import 'components/color-scheme-toggle.css';
+@import 'components/site-footer.css';
