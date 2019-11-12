@@ -1,23 +1,32 @@
 <!doctype html>
 <html lang="en" class="no-js">
-<head>
-  <meta charset="utf-8">
-  <script>
-    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ renderData.description or description or metadata.description }}">
-  <title>{{ renderData.title or title or metadata.title }}</title>
-  {# <link rel="stylesheet" href="/styles/index.css"> #}
-  <link rel="stylesheet" href="{{ "/assets/css/" | url }}styles.css?ref={{ site.buildTime.getTime() }}">
-  <link rel="stylesheet" href="https://use.typekit.net/itz0kxv.css">	
-</head>
-<body id="top" itemscope itemtype="http://schema.org/WebPage">
-  <div class="site-content | hPad">
-    <p class="site-branding"><b><a href="/">BG</a></b></p>
-    {{ content | safe }}
-  </div>
-  {% include "layouts/_footer.njk" %}
-  <script type="module" src="{{ "/assets/js/" | url }}index.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <script>
+      document.documentElement.className = document
+        .documentElement
+        .className
+        .replace(/\bno-js\b/g, '') + 'has-js ';
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ renderData.description or description or metadata.description }}">
+    <title>{{ renderData.title or title or metadata.title }}</title>
+    {# <link rel="stylesheet" href="/styles/index.css"> #}
+    <link rel="stylesheet" href="{{ "/assets/css/" | url }}styles.css?ref={{ site.buildTime.getTime() }}">
+    <link rel="stylesheet" href="https://use.typekit.net/itz0kxv.css">
+  </head>
+  <body id="top" itemscope itemtype="http://schema.org/WebPage">
+    <div class="site-content | hPad">
+      <p class="site-branding">
+        <b>
+          <a href="/">BG</a>
+        </b>
+      </p>
+      <div class="entry-body">
+        {{ content | safe }}
+      </div>
+    </div>
+    {% include "layouts/_footer.njk" %}
+    <script type="module" src="{{ "/assets/js/" | url }}index.js"></script>
+  </body>
 </html>
