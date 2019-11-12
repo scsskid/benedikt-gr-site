@@ -1,13 +1,15 @@
 /* Colors --------------- */
 html {
   --hue-main: 220;
+  --hue-accent: 238;
 }
 
 @define-mixin lightColorProperties {
   --color-text: hsl(var(--hue-main), 10%, 25%);
   --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
-  --color-link: hsl(var(--hue-main), 40%, 30%);
+  --color-link: hsl(var(--hue-accent), 70%, 50%);
   --color-background: hsl(var(--hue-main), 51%, 98.5%);
+  --color-text--highlight: var(--color-link);
 }
 
 @define-mixin darkColorProperties {
@@ -15,8 +17,9 @@ html {
 
   --color-text: hsl(var(--hue-main), 5%, 70%);
   --color-text--high-contrast: hsl(var(--hue-main), 10%, 95%);
-  --color-link: hsl(var(--hue-main), 60%, 60%);
+  --color-link: hsl(var(--hue-accent), 70%, 65%);
   --color-background: hsl(var(--hue-main), 10%, 12.5%);
+  --color-text--highlight: var(--color-link);
 }
 
 @media (prefers-color-scheme: light) {

@@ -8,7 +8,7 @@
     font-size: calc(var(--ms-neg-2) * 1rem);
 
     /* line-height: calc(60 * var(--b)); */
-    box-shadow: 0 0 0 1px var(--color-text);
+    box-shadow: 0 0 0 1px currentColor;
     height: calc(4 * var(--b));
     display: inline-flex;
     align-items: center;
@@ -22,6 +22,8 @@
 
   & :checked + label {
     font-weight: bold;
+    color: var(--color-text--high-contrast);
+    color: var(--color-text--highlight);
   }
 }
 
