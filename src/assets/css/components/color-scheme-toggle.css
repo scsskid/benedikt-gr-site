@@ -1,2 +1,23 @@
 .color-scheme-toggle {
+  & input {
+    display: none;
+  }
+
+  & label {
+    font-size: calc(var(--ms-neg-2) * 1rem);
+    line-height: calc(4 * var(--b));
+    display: inline-block;
+    background: var(--color-text--high-contrast);
+    color: var(--color-background);
+    height: calc(6 * var(--b));
+    display: inline-flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+  }
+
+  & :checked + label {
+    font-weight: bold;
+  }
 }
