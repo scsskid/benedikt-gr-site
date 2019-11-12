@@ -4,5 +4,5 @@
 @import 'base/typography.css';
 @import 'base/colors.css';
 @import 'base/layout.css';
-@import 'components/color-scheme-toggle.css';
+@import 'components/color-scheme-toggles.css';
 @import 'components/site-footer.css';

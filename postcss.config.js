@@ -3,6 +3,7 @@ module.exports = ctx => ({
   plugins: {
     'postcss-import': {},
     'postcss-url': { url: 'copy', useHash: true },
+    'postcss-mixins': {},
     'postcss-preset-env': {
       stage: 0
     },
