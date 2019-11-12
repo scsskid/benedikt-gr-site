@@ -39,7 +39,8 @@ h3 {
   font-size: 1rem;
 }
 
-.small-text {
+.entry-body p {
+  max-width: 26em;
 }
 
 .site-footer p {
