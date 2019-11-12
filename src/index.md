@@ -1,6 +1,5 @@
 ---
-layout: layouts/home.njk
-permalink: "/"
+layout: layouts/index.njk
 ---
 
 Hi, I'm __Benedikt__, a web developer based in Berlin, Germany. While digging modern development workflows, I try to avoid complexity and bloat.
