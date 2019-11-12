@@ -18,8 +18,8 @@ module.exports = {
   }),
   availability: {
     status: true,
-    text: 'available',
-    date: 'Jan 2020'
+    text: 'available from january 2020',
+    date: ''
   },
   dirs: {
     icons: '/src/assets/images/icons/'

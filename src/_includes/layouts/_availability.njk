@@ -1,0 +1,4 @@
+{% set av = site.availability %}
+<div class="availability{{ " availability--true" if av.status }}">
+	<p><b>{{ av.text }}</b>  {{ av.date }}</p>
+</div>	
