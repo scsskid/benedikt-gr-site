@@ -5,7 +5,7 @@ module.exports = ctx => ({
     'postcss-url': { url: 'copy', useHash: true },
     'postcss-mixins': {},
     'postcss-preset-env': {
-      stage: 0
+      stage: 1
     },
     cssnano: ctx.env === 'production' ? {} : false
   }
