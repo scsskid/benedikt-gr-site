@@ -2,13 +2,11 @@
 layout: layouts/index.njk
 ---
 
-Hi, I'm __Benedikt__, a web developer based in Berlin, Germany. While digging modern development workflows, I try to avoid complexity and bloat.
+I'm __Benedikt__, a web developer based in Berlin, Germany.
 
-Working and learning from each other in teams is something I value very much.
+You can read more [about me](about/) or look at [my articles](notes/), which are rather quick notes or links than blog posts.
 
-Also I call myself well experienced in creating visual designs and applying them to the web for all devices.
+If you are interested in sites I built, when I was freelancing, you should visit [my old portolfio site](http://via.benedikt.gr/).
 
-I try to stay updated on trends but never to be trapped by them.
 
-__I'm available from january 2020.__  
 __[Contact me](mailto:mail@benedikt.gr)__
