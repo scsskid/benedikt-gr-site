@@ -9,16 +9,12 @@ export default () => {
     return 'light'
   }
 
-  function getSettingColorTheme() {
-    return localStorage.getItem('color-theme')
-  }
-
   function removeColorThemeLocalStorage() {
     localStorage.removeItem('color-theme')
   }
 
   function saveColorTheme(colorTheme) {
-    if ('system' === colorTheme) {
+    if (colorTheme === 'system') {
       removeColorThemeLocalStorage()
       return
     }
@@ -26,34 +22,28 @@ export default () => {
   }
 
   function applyColorTheme() {
-    let localStorageColorTheme = localStorage.getItem('color-theme')
-    let colorTheme = localStorageColorTheme ? localStorageColorTheme : getSystemPreferenceColorTheme()
+    const localStorageColorTheme = localStorage.getItem('color-theme')
+    const colorTheme = localStorageColorTheme || getSystemPreferenceColorTheme()
     document.documentElement.setAttribute('data-color-theme', colorTheme)
   }
 
   function themeSwitchHandler() {
-    themeSwitches.forEach(el => {
+    themeSwitches.forEach(themeSwitch => {
+      const el = themeSwitch
       if (el.value === localStorage.getItem('color-theme')) {
         el.checked = true
       }
 
       el.addEventListener('change', () => {
-        if ('system' !== el.value) {
+        if (el.value !== 'system') {
           saveColorTheme(el.value)
           applyColorTheme(el.value)
         } else {
           removeColorThemeLocalStorage()
           document.documentElement.removeAttribute('data-color-theme')
         }
-
-        readOutTheme()
       })
     })
-  }
-
-  function readOutTheme() {
-    let setting = localStorage.getItem('color-theme')
-    document.querySelector('.theme-readout').innerHTML = getSettingColorTheme() ? getSettingColorTheme() : 'not set'
   }
 
   function colorThemeTest() {
