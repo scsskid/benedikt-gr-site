@@ -8,6 +8,7 @@
         .className
         .replace(/\bno-js\b/g, '') + 'has-js ';
     </script>
+    <script async type="module" src="{{ "/_assets/js/" | url }}color-theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ renderData.description or description or data.description }}">
     {# <title>{% if '/' === page.url %}Benedikt Gregor{% else %}{{ page.title | markdown | striptags | decodeHtmlEntities }} · BG{% endif %}</title> #}
@@ -27,6 +28,6 @@
       </div>
     </div>
     {% include "layouts/_site-footer.njk" %}
-    <script type="module" src="{{ "/_assets/js/" | url }}index.js"></script>
+    
   </body>
 </html>

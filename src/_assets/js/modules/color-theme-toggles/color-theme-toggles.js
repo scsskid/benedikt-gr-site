@@ -1,13 +1,20 @@
 export default () => {
-  function getColorThemeSystemPreference() {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  const mqlPrefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+  const themeSwitches = document.querySelectorAll('[data-color-theme-toggle]')
+
+  function getSystemPreferenceColorTheme() {
+    if (mqlPrefersDark.matches) {
       return 'dark'
     }
     return 'light'
   }
 
-  function getColorThemeLocalStorage() {
+  function getSettingColorTheme() {
     return localStorage.getItem('color-theme')
+  }
+
+  function removeColorThemeLocalStorage() {
+    localStorage.removeItem('color-theme')
   }
 
   function saveColorTheme(colorTheme) {
@@ -18,20 +25,13 @@ export default () => {
     localStorage.setItem('color-theme', colorTheme)
   }
 
-  function removeColorThemeLocalStorage() {
-    localStorage.removeItem('color-theme')
-  }
-
   function applyColorTheme() {
     let localStorageColorTheme = localStorage.getItem('color-theme')
-    // console.log(localStorageColorTheme)
-    let colorTheme = localStorageColorTheme ? localStorageColorTheme : getColorThemeSystemPreference()
-
+    let colorTheme = localStorageColorTheme ? localStorageColorTheme : getSystemPreferenceColorTheme()
     document.documentElement.setAttribute('data-color-theme', colorTheme)
   }
 
   function themeSwitchHandler() {
-    const themeSwitches = document.querySelectorAll('[data-color-theme-toggle]')
     themeSwitches.forEach(el => {
       if (el.value === localStorage.getItem('color-theme')) {
         el.checked = true
@@ -39,36 +39,32 @@ export default () => {
 
       el.addEventListener('change', () => {
         if ('system' !== el.value) {
-          console.log(el.value)
           saveColorTheme(el.value)
           applyColorTheme(el.value)
         } else {
           removeColorThemeLocalStorage()
           document.documentElement.removeAttribute('data-color-theme')
         }
+
+        readOutTheme()
       })
     })
   }
 
   function readOutTheme() {
     let setting = localStorage.getItem('color-theme')
-    document.querySelector('.theme-readout').innerHTML = getColorThemeLocalStorage()
-      ? getColorThemeLocalStorage()
-      : 'not set'
+    document.querySelector('.theme-readout').innerHTML = getSettingColorTheme() ? getSettingColorTheme() : 'not set'
   }
-
-  const mql = window.matchMedia('(prefers-color-scheme: dark)')
 
   function colorThemeTest() {
     applyColorTheme()
   }
-  mql.addListener(colorThemeTest)
+  mqlPrefersDark.addListener(colorThemeTest)
   // Future Syntax
   // mql.addEventListener('change', e => {
   //   applyColorTheme()
   //   readOutTheme()
   // })
-
   themeSwitchHandler()
   applyColorTheme()
 }
