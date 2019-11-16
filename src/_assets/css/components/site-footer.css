@@ -1,7 +1,6 @@
 .site-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-row-gap: 2rem;
 }
 
 .site-footer .color-scheme-toggles {
@@ -13,17 +12,8 @@
 }
 
 .site-footer .color-scheme-toggles {
-  margin-bottom: calc(6 * var(--b));
-}
-
-.site-footer .social-links {
-  display: flex;
-}
-
-.site-footer .social-links-list {
-  margin-left: auto;
 }
 
 .site-colophon p {
-  margin-bottom: 0;
+  text-align: center;
 }

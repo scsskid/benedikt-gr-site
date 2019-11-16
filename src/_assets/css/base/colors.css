@@ -18,7 +18,7 @@ html {
 
   --color-text: hsl(var(--hue-main), 20%, 70%);
   --color-text--high-contrast: hsl(var(--hue-main), 20%, 90%);
-  --color-text--low-contrast: hsl(var(--hue-main), 10%, 40%);
+  --color-text--low-contrast: hsl(var(--hue-main), 10%, 50%);
   --color-background: hsl(var(--hue-main), 10%, 10%);
 }
 

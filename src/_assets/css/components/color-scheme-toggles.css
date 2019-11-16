@@ -1,7 +1,4 @@
 .color-scheme-toggles {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 .color-scheme-toggles input[type='radio'] {
@@ -19,7 +16,6 @@
 
 .color-scheme-toggles-title {
   margin-right: 1rem;
-  line-height: calc(6 * var(--b));
   color: var(--color-text--low-contrast);
 }
 
