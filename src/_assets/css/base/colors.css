@@ -15,10 +15,11 @@ html {
 @define-mixin darkColorProperties {
   -webkit-font-smoothing: antialiased;
 
-  --color-text: hsl(var(--hue-main), 5%, 70%);
-  --color-text--high-contrast: hsl(var(--hue-main), 10%, 95%);
+  --color-text: hsl(var(--hue-main), 20%, 70%);
+  --color-text--high-contrast: hsl(var(--hue-main), 20%, 90%);
+  --color-text--low-contrast: hsl(var(--hue-main), 10%, 40%);
   --color-link: hsl(var(--hue-accent), 70%, 65%);
-  --color-background: hsl(var(--hue-main), 10%, 12.5%);
+  --color-background: hsl(var(--hue-main), 10%, 10%);
   --color-text--highlight: var(--color-link);
 }
 
@@ -75,4 +76,8 @@ h3 {
   img:hover {
     opacity: 1;
   }
+}
+
+.site-colophon {
+  color: var(--color-text--low-contrast);
 }
