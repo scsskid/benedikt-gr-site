@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 
-# Nothing There Yet
+# Hypemachine
 
 While digging modern development workflows, I try to avoid complexity and bloat.
 
