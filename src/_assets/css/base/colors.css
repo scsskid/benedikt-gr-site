@@ -3,7 +3,7 @@ html {
   --hue-main: 220;
   --hue-accent: 238;
   --color-link: hsl(var(--hue-accent), 75%, 60%);
-  --color-almost-white: hsl(var(--hue-accent), 75%, 90%);
+  --color-almost-white: hsl(var(--hue-accent), 75%, 99%);
 }
 
 @define-mixin lightColorProperties {
@@ -11,6 +11,10 @@ html {
   --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
   --color-text--low-contrast: var(--color-text);
   --color-background: hsl(var(--hue-main), 51%, 98.5%);
+
+  /* Button */
+  --button-box-shadow: 0 1px 4px -2px hsla(var(--hue-main), 0%, 2%, 0.4);
+  --button-background-color: #fff;
 }
 
 @define-mixin darkColorProperties {
@@ -20,6 +24,10 @@ html {
   --color-text--high-contrast: hsl(var(--hue-main), 20%, 90%);
   --color-text--low-contrast: hsl(var(--hue-main), 10%, 50%);
   --color-background: hsl(var(--hue-main), 10%, 10%);
+
+  /* Button */
+  --button-box-shadow: inset 0 0 0 1px currentColor;
+  --button-background-color: transparent;
 }
 
 @media (prefers-color-scheme: light) {
