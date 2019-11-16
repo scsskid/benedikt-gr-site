@@ -1,0 +1,21 @@
+@define-mixin button {
+  font-size: calc(var(--ms-neg-1) * 1rem);
+  box-shadow: inset 0 0 0 1px currentColor;
+  height: calc(8 * var(--b));
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  cursor: pointer;
+  border-radius: 200px;
+}
+
+@define-mixin button-active {
+  font-weight: bold;
+  background: var(--color-link);
+  box-shadow: none;
+  color: var(--color-almost-white);
+}
+
+.button {
+  @mixin button;
+}

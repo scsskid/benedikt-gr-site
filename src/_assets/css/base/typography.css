@@ -52,7 +52,6 @@ h3 {
   max-width: 26em;
 }
 
-.site-footer p,
 .tiny-text {
   font-size: calc(var(--ms-neg-2) * 1rem);
   line-height: calc(4 * var(--b));
@@ -67,5 +66,5 @@ h3 {
 .meta-text {
   font-variant-numeric: oldstyle-nums;
   text-transform: lowercase;
-  margin-bottom: calc(2 * var(--b));
+  margin-bottom: calc(1 * var(--b));
 }
