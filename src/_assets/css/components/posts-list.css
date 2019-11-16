@@ -1,0 +1,3 @@
+.posts-list li {
+  margin-bottom: calc(6 * var(--b));
+}

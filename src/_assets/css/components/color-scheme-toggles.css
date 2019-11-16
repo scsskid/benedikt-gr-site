@@ -35,10 +35,11 @@
   /* margin-bottom: var(--b); */
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  margin-bottom: 0;
+
+  /* margin-bottom: 0; */
   margin-right: 1rem;
   line-height: calc(6 * var(--b));
-  color: var(--color-text--high-contrast);
+  color: var(--color-text--low-contrast);
 }
 
 .color-scheme-toggles-list {

@@ -13,7 +13,7 @@
 }
 
 .site-footer .color-scheme-toggles {
-  margin-bottom: calc(2 * var(--b));
+  margin-bottom: calc(6 * var(--b));
 }
 
 .site-footer .social-links {

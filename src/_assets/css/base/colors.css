@@ -2,12 +2,12 @@
 html {
   --hue-main: 220;
   --hue-accent: 238;
+  --color-link: hsl(var(--hue-accent), 75%, 60%);
 }
 
 @define-mixin lightColorProperties {
   --color-text: hsl(var(--hue-main), 10%, 25%);
   --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
-  --color-link: hsl(var(--hue-accent), 70%, 50%);
   --color-background: hsl(var(--hue-main), 51%, 98.5%);
   --color-text--highlight: var(--color-link);
 }
@@ -18,7 +18,6 @@ html {
   --color-text: hsl(var(--hue-main), 20%, 70%);
   --color-text--high-contrast: hsl(var(--hue-main), 20%, 90%);
   --color-text--low-contrast: hsl(var(--hue-main), 10%, 40%);
-  --color-link: hsl(var(--hue-accent), 70%, 65%);
   --color-background: hsl(var(--hue-main), 10%, 10%);
   --color-text--highlight: var(--color-link);
 }
@@ -64,7 +63,7 @@ h3 {
 }
 
 .site-branding a {
-  color: var(--color-text--high-contrast);
+  color: var(--color-text--low-contrast);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -79,5 +78,9 @@ h3 {
 }
 
 .site-colophon {
+  color: var(--color-text--low-contrast);
+}
+
+.meta-text {
   color: var(--color-text--low-contrast);
 }
