@@ -49,7 +49,7 @@ module.exports = function(eleventyConfig) {
   })
 
   eleventyConfig.addFilter('readableDate', dateObj => {
-    return DateTime.fromJSDate(dateObj).toFormat('dd LLLL yyyy')
+    return DateTime.fromJSDate(dateObj).toFormat('dd LLL yyyy')
   })
 
   eleventyConfig.addFilter('markdown', string => {
