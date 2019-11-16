@@ -1,8 +1,7 @@
 ---
 layout: layouts/base.njk
+title: Legal Information
 ---
-
-# Legal Information
 
 Verantwortlich für den Inhalt dieser Seiten:
 

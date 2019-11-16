@@ -1,6 +1,9 @@
 ---
 layout: layouts/index.njk
+title: Nice to meet you.
 ---
+
+
 
 I'm __Benedikt__, a web developer based in Berlin, Germany.
 

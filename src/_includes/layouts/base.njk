@@ -19,11 +19,10 @@
   <body id="top" itemscope itemtype="http://schema.org/WebPage">
     <div class="site-content | hPad">
       <p class="site-branding">
-        <b>
           <a href="/">BG</a>
-        </b>
       </p>
       <div class="entry-body">
+        <h1 class="main-title">{{ title | safe }}</h1>
         {{ content | safe }}
       </div>
     </div>

@@ -1,8 +1,7 @@
 ---
 layout: layouts/base.njk
+title: Hypemachine
 ---
-
-# Hypemachine
 
 While digging modern development workflows, I try to avoid complexity and bloat.
 
