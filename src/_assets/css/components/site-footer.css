@@ -1,19 +1,8 @@
 .site-footer {
   display: grid;
-  grid-row-gap: 2rem;
-}
-
-.site-footer .color-scheme-toggles {
-  margin-right: 0.5rem;
+  grid-row-gap: calc(8 * var(--b));
 }
 
 .site-footer .site-colophon {
   flex: 0 0 100%;
-}
-
-.site-footer .color-scheme-toggles {
-}
-
-.site-colophon p {
-  text-align: center;
 }

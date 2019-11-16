@@ -1,4 +1,14 @@
 .color-scheme-toggles {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-scheme-toggles-title {
+  order: 1;
+  margin-bottom: 0;
+  padding-top: calc(2 * var(--b));
+  color: var(--color-text--low-contrast);
+  text-align: center;
 }
 
 .color-scheme-toggles input[type='radio'] {
@@ -14,20 +24,13 @@
   }
 }
 
-.color-scheme-toggles-title {
-  margin-right: 1rem;
-  color: var(--color-text--low-contrast);
-}
-
 .color-scheme-toggles-list {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   & > li {
     margin-right: 0.75rem;
-  }
-
-  & > li:first-child {
-    margin-right: 1.25rem;
   }
 
   & > li:last-child {
