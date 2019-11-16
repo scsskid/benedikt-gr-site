@@ -44,8 +44,14 @@ h3 {
 }
 
 .main-title {
-  font-size: calc(var(--ms-2) * 1rem);
+  font-size: calc(var(--ms-3) * 1rem);
+  margin-bottom: calc(6 * var(--b));
+}
+
+.hero-title {
+  font-size: 370%;
   margin-bottom: calc(8 * var(--b));
+  line-height: 0.5;
 }
 
 .entry-body p {

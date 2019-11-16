@@ -1,6 +1,6 @@
 ---
 layout: layouts/index.njk
-title: Nice to meet you.
+title: Nice to<br>meet you.
 ---
 
 
