@@ -1,3 +1,13 @@
 .posts-list li {
   margin-bottom: calc(6 * var(--b));
 }
+
+.posts-list-el .meta-text {
+  max-width: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.posts-list-el .reading-time {
+  display: none;
+}

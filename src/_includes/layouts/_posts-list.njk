@@ -2,9 +2,9 @@
 {% set posts = collections.posts %}
 {% for post in posts %}
 {# {{ post | dumpB | safe }} #}
-  <li>
-    <p class="meta-text"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></p>
-    <span>— {{ helpers.getReadingTime(content) }} minute read</span>
+  <li class="posts-list-el">
+    <p class="meta-text"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> <span class="reading-time">{{ helpers.getReadingTime(content) }}m</span></p>
+    
     {# {% for tag in post.data.tags %}
       <a href="/blog/tags/{{ tag | slug }}" class="tag">{{ tag }}</a>
     {% endfor %} #}

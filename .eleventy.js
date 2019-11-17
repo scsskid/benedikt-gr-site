@@ -40,8 +40,9 @@ module.exports = function(eleventyConfig) {
 
   const livePosts = post => post.date <= new Date() && !post.data.draft
   const allPosts = post => post.date <= new Date()
+  const posts = livePosts
   eleventyConfig.addCollection('posts', collection => {
-    return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)].reverse()
+    return [...collection.getFilteredByGlob('./src/posts/*.md').filter(posts)].reverse()
   })
 
   eleventyConfig.addFilter('markdown', string => {
