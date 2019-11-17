@@ -4,7 +4,8 @@ module.exports = {
   url: 'https://benedikt.gr',
   urls: {
     github: 'https://github.com/scsskid/',
-    linkedin: 'https://www.linkedin.com/in/scsskid/'
+    linkedin: 'https://linkedin.com/in/scsskid/',
+    twitter: 'https://twitter.com/scsskid/'
   },
   baseUrl: '/',
   author: 'Name Surname',
