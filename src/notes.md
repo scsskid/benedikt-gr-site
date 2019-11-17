@@ -1,4 +1,4 @@
 ---
-layout: layouts/notes.njk
+layout: layouts/posts.njk
 title: Notes
 ---
