@@ -34,8 +34,14 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(svgContents)
 
-  eleventyConfig.addCollection('notes', collection => {
-    return collection.getFilteredByGlob('src/notes/*.md').sort((a, b) => b.date - a.date)
+  // eleventyConfig.addCollection('posts', collection => {
+  //   return collection.getFilteredByGlob('src/notes/*.md').sort((a, b) => b.date - a.date)
+  // })
+
+  const livePosts = post => post.date <= new Date() && !post.data.draft
+  const allPosts = post => post.date <= new Date()
+  eleventyConfig.addCollection('posts', collection => {
+    return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)].reverse()
   })
 
   eleventyConfig.addFilter('markdown', string => {
