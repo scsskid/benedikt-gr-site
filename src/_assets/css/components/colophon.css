@@ -1,0 +1,7 @@
+.site-colophon {
+  text-align: center;
+}
+
+.site-colophon p:first-child {
+  margin-bottom: calc(6 * var(--b));
+}

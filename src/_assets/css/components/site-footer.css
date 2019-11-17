@@ -1,29 +1,8 @@
 .site-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.site-footer .color-scheme-toggles {
-  margin-right: 0.5rem;
+  display: grid;
+  grid-row-gap: calc(8 * var(--b));
 }
 
 .site-footer .site-colophon {
   flex: 0 0 100%;
-}
-
-.site-footer .color-scheme-toggles {
-  margin-bottom: calc(2 * var(--b));
-}
-
-.site-footer .social-links {
-  display: flex;
-}
-
-.site-footer .social-links-list {
-  margin-left: auto;
-}
-
-.site-colophon p {
-  margin-bottom: 0;
 }

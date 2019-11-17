@@ -1,9 +1,7 @@
 ---
 title: JAMstack Conf Recommended Talks
-date: 2019-11-11 19:00:00
+date: 2019-11-07 19:00:00
 ---
-
-## JAMStack Conf Recommended Talks
 
 These talks are worth it.
 

@@ -1,9 +1,11 @@
 <footer class="site-footer | hPad">
   {% include "layouts/_color-scheme-toggle.njk" %}
   {% include "layouts/_social-links.njk" %}
-  <div class="site-colophon">
-    <p>Made with 🐝 in Berlin, Germany · <a href="/legal/">Legal Information</a></p>
-    <p>Built with <a href="https://11ty.io">Eleventy.js</a> · Deployed on <a href="https://netlify.com">Netlify</a> · Last Update: {{ site.buildTimeString }}</p>
+  <div class="site-colophon | tiny-text">
+    <p>Made with 🐝 in Berlin, Germany</p>
+    <p>Built with <a href="https://11ty.io">Eleventy.js</a> · Deployed on <a href="https://netlify.com">Netlify</a><br>
+    Last Update: {{ site.buildTimeString }}</p>
+    <p><a href="/legal/">Legal Information</a></p>
   </div>
 
 </footer>

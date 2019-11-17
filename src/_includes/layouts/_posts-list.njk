@@ -1,9 +1,10 @@
-
-<ol class="ui-list">
-{% set posts = collections.notes %}
+<ol class="posts-list ui-list">
+{% set posts = collections.posts %}
 {% for post in posts %}
-  <li>
-    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+{# {{ post | dumpB | safe }} #}
+  <li class="posts-list-el">
+    <p class="meta-text"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> <span class="reading-time">{{ helpers.getReadingTime(content) }}m</span></p>
+    
     {# {% for tag in post.data.tags %}
       <a href="/blog/tags/{{ tag | slug }}" class="tag">{{ tag }}</a>
     {% endfor %} #}
@@ -11,3 +12,4 @@
   </li>
 {%endfor%}
 </ol>
+

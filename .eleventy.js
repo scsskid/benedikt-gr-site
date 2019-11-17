@@ -7,6 +7,9 @@ const markdownItAnchor = require('markdown-it-anchor')
 const markdownItAttrs = require('markdown-it-attrs')
 const markdownItContainer = require('markdown-it-container')
 const markdownItFootnote = require('markdown-it-footnote')
+const stringify = require('javascript-stringify').stringify
+const util = require('util')
+
 const markdownItConfig = {
   html: true,
   breaks: true,
@@ -31,12 +34,30 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(svgContents)
 
-  eleventyConfig.addCollection('notes', collection => {
-    return collection.getFilteredByGlob('src/notes/*.md').sort((a, b) => b.date - a.date)
+  // eleventyConfig.addCollection('posts', collection => {
+  //   return collection.getFilteredByGlob('src/notes/*.md').sort((a, b) => b.date - a.date)
+  // })
+
+  const livePosts = post => post.date <= new Date() && !post.data.draft
+  const allPosts = post => post.date <= new Date()
+  const posts = livePosts
+  eleventyConfig.addCollection('posts', collection => {
+    return [...collection.getFilteredByGlob('./src/posts/*.md').filter(posts)].reverse()
   })
 
   eleventyConfig.addFilter('markdown', string => {
     return md.renderInline(string)
+  })
+
+  eleventyConfig.addFilter('console', function(value) {
+    const output = stringify(value, null, '\t', { maxDepth: 2 })
+    return '<script>console.log(' + output + ')</script>'
+  })
+
+  eleventyConfig.addFilter('dumpB', obj => {
+    const inspectedObj = util.inspect(obj, { depth: 1 })
+    const output = stringify(inspectedObj, null, '\t', { maxDepth: 1 })
+    return `<script>console.log(${output})</script>`
   })
 
   eleventyConfig.addFilter('decodeHtmlEntities', string => {
@@ -49,7 +70,7 @@ module.exports = function(eleventyConfig) {
   })
 
   eleventyConfig.addFilter('readableDate', dateObj => {
-    return DateTime.fromJSDate(dateObj).toFormat('dd LLLL yyyy')
+    return DateTime.fromJSDate(dateObj).toFormat('dd LLL yyyy')
   })
 
   eleventyConfig.addFilter('markdown', string => {

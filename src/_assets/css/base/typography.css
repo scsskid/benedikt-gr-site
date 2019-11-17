@@ -12,8 +12,11 @@
   --ms-neg-2: 0.694;
 }
 
+/* @custom-media --viewport-medium (width <= 50rem); */
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
 html {
-  font-size: 125%;
+  font-size: 115%;
 }
 
 body {
@@ -25,9 +28,7 @@ body {
 
 p,
 ol,
-h1,
-h2,
-h3 {
+:--heading {
   margin-top: 0;
   margin-bottom: 1em;
 
@@ -42,11 +43,34 @@ h3 {
   font-size: 1rem;
 }
 
+.main-title {
+  font-size: calc(var(--ms-3) * 1rem);
+  margin-bottom: calc(6 * var(--b));
+}
+
+.hero-title {
+  font-size: 370%;
+  margin-bottom: calc(8 * var(--b));
+  line-height: 0.5;
+}
+
 .entry-body p {
   max-width: 26em;
 }
 
-.site-footer p {
+.tiny-text {
   font-size: calc(var(--ms-neg-2) * 1rem);
   line-height: calc(4 * var(--b));
+}
+
+.meta-text,
+.small-text {
+  font-size: calc(var(--ms-neg-1) * 1rem);
+  line-height: calc(4 * var(--b));
+}
+
+.meta-text {
+  font-variant-numeric: oldstyle-nums;
+  text-transform: lowercase;
+  margin-bottom: calc(1 * var(--b));
 }

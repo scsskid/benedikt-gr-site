@@ -8,3 +8,8 @@ a {
   padding-left: 0;
   list-style: none;
 }
+
+.site-branding {
+  text-align: right;
+  font-size: calc(var(--ms-neg-1) * 1rem);
+}

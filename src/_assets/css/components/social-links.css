@@ -1,16 +1,18 @@
 .social-links-list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .social-links-list svg {
   width: auto;
   height: calc(6 * var(--b));
+  vertical-align: bottom;
 }
 
 .social-links-list {
   & li {
-    margin-left: 0.25rem;
+    margin: 0 0.5rem;
   }
 
   & a {

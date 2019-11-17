@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 {{ content | safe }}
-{# {% include 'layouts/_availability.njk' %} #}
 
-<h1>Notes</h1>
-{% include 'layouts/_notes.njk' %}
+<h1>Quick Notes</h1>
+{% include 'layouts/_posts-list.njk' %}
+<p><a href="{{ '/notes/' | url }}">all notes →</a></p>

@@ -15,7 +15,7 @@ body {
 
 .site-content,
 .site-footer {
-  width: 100%;
+  width: 100vw;
   padding-top: 2rem;
   padding-bottom: 0;
   max-width: 30rem;
@@ -32,8 +32,8 @@ body {
 }
 
 .hPad {
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
 .site-footer {
