@@ -7,6 +7,9 @@ const markdownItAnchor = require('markdown-it-anchor')
 const markdownItAttrs = require('markdown-it-attrs')
 const markdownItContainer = require('markdown-it-container')
 const markdownItFootnote = require('markdown-it-footnote')
+const stringify = require('javascript-stringify').stringify
+const util = require('util')
+
 const markdownItConfig = {
   html: true,
   breaks: true,
@@ -37,6 +40,17 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('markdown', string => {
     return md.renderInline(string)
+  })
+
+  eleventyConfig.addFilter('console', function(value) {
+    const output = stringify(value, null, '\t', { maxDepth: 2 })
+    return '<script>console.log(' + output + ')</script>'
+  })
+
+  eleventyConfig.addFilter('dumpB', obj => {
+    const inspectedObj = util.inspect(obj, { depth: 1 })
+    const output = stringify(inspectedObj, null, '\t', { maxDepth: 1 })
+    return `<script>console.log(${output})</script>`
   })
 
   eleventyConfig.addFilter('decodeHtmlEntities', string => {
