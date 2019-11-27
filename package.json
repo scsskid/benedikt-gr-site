@@ -27,6 +27,7 @@
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",
     "cssnano": "^4.1.10",
+    "dark-mode-toggle": "^0.4.12",
     "eleventy-plugin-svg-contents": "^0.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.5.0",
