@@ -1,13 +1,5 @@
 export default () => {
-  const mqlPrefersDark = window.matchMedia('(prefers-color-scheme: dark)')
   const themeSwitches = document.querySelectorAll('[data-color-theme-toggle]')
-
-  function getSystemPreferenceColorTheme() {
-    if (mqlPrefersDark.matches) {
-      return 'dark'
-    }
-    return 'light'
-  }
 
   function removeColorThemeLocalStorage() {
     localStorage.removeItem('color-theme')
@@ -23,8 +15,10 @@ export default () => {
 
   function applyColorTheme() {
     const localStorageColorTheme = localStorage.getItem('color-theme')
-    const colorTheme = localStorageColorTheme || getSystemPreferenceColorTheme()
-    document.documentElement.setAttribute('data-color-theme', colorTheme)
+    const colorTheme = localStorageColorTheme || null
+    if (colorTheme) {
+      document.documentElement.setAttribute('data-color-theme', colorTheme)
+    }
   }
 
   function themeSwitchHandler() {
@@ -43,18 +37,9 @@ export default () => {
           document.documentElement.removeAttribute('data-color-theme')
         }
       })
+      applyColorTheme()
     })
   }
 
-  function colorThemeTest() {
-    applyColorTheme()
-  }
-  mqlPrefersDark.addListener(colorThemeTest)
-  // Future Syntax
-  // mql.addEventListener('change', e => {
-  //   applyColorTheme()
-  //   readOutTheme()
-  // })
   themeSwitchHandler()
-  applyColorTheme()
 }
