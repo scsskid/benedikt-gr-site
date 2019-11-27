@@ -2,19 +2,19 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ renderData.description or description or data.description }}">
+    {# <title>{% if '/' === page.url %}Benedikt Gregor{% else %}{{ page.title | markdown | striptags | decodeHtmlEntities }} · BG{% endif %}</title> #}
+    <title>{% if '/' === page.url %}{{ site.title  }} {% else %} {{ title }} · {{ site.title  }}{% endif %}</title>
+    <script type="module" src="{{ "/_assets/js/" | url }}color-theme-toggle.mjs"></script>
+    <link rel="stylesheet" href="{{ "/_assets/css/" | url }}styles.css?ref={{ site.buildTime.getTime() }}">
+    <link rel="stylesheet" href="https://use.typekit.net/itz0kxv.css">
     <script>
       document.documentElement.className = document
         .documentElement
         .className
         .replace(/\bno-js\b/g, '') + 'has-js ';
     </script>
-    <script async type="module" src="{{ "/_assets/js/" | url }}color-theme.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ renderData.description or description or data.description }}">
-    {# <title>{% if '/' === page.url %}Benedikt Gregor{% else %}{{ page.title | markdown | striptags | decodeHtmlEntities }} · BG{% endif %}</title> #}
-    <title>{% if '/' === page.url %}{{ site.title  }} {% else %} {{ title }} · {{ site.title  }}{% endif %}</title>
-    <link rel="stylesheet" href="{{ "/_assets/css/" | url }}styles.css?ref={{ site.buildTime.getTime() }}">
-    <link rel="stylesheet" href="https://use.typekit.net/itz0kxv.css">
   </head>
   <body id="top" itemscope itemtype="http://schema.org/WebPage">
     <div class="site-content | hPad">
@@ -27,6 +27,5 @@
       </div>
     </div>
     {% include "layouts/_site-footer.njk" %}
-    
   </body>
 </html>
