@@ -1,10 +1,6 @@
 /* Colors --------------- */
-html {
-  --hue-main: 220;
-  --hue-accent: 238;
-  --color-link: hsl(var(--hue-accent), 75%, 60%);
-  --color-almost-white: hsl(var(--hue-accent), 75%, 99%);
 
+@define-mixin lightColorProperties {
   /* Light Properties */
   --color-text: hsl(var(--hue-main), 10%, 25%);
   --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
@@ -27,6 +23,15 @@ html {
   /* Button */
   --button-box-shadow: inset 0 0 0 1px currentColor;
   --button-background-color: transparent;
+}
+
+html {
+  --hue-main: 220;
+  --hue-accent: 238;
+  --color-link: hsl(var(--hue-accent), 75%, 60%);
+  --color-almost-white: hsl(var(--hue-accent), 75%, 99%);
+
+  @mixin lightColorProperties;
 }
 
 @media (prefers-color-scheme: dark) {
