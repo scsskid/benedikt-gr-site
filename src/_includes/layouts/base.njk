@@ -7,14 +7,26 @@
         .documentElement
         .className
         .replace(/\bno-js\b/g, '') + 'has-js ';
+      // If `prefers-color-scheme` is not supported, fall back to light mode.
+      // In this case, light.css will be downloaded with `highest` priority.
+      if (window.matchMedia('(prefers-color-scheme)').media === 'not all') {
+        document.documentElement.style.display = 'none';
+        document.head.insertAdjacentHTML(
+            'beforeend',
+            '<link rel="stylesheet" href="{{ "/_assets/css/" | url }}light-colors.css" onload="document.documentElement.style.display = ``">'
+        );
+      }        
     </script>
-    <script async type="module" src="{{ "/_assets/js/" | url }}color-theme.js"></script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ renderData.description or description or data.description }}">
     {# <title>{% if '/' === page.url %}Benedikt Gregor{% else %}{{ page.title | markdown | striptags | decodeHtmlEntities }} · BG{% endif %}</title> #}
     <title>{% if '/' === page.url %}{{ site.title  }} {% else %} {{ title }} · {{ site.title  }}{% endif %}</title>
-    <link rel="stylesheet" href="{{ "/_assets/css/" | url }}styles.css?ref={{ site.buildTime.getTime() }}">
+    <link rel="stylesheet" href="{{ "/_assets/css/" | url }}main.css?ref={{ site.buildTime.getTime() }}">
+    <link rel="stylesheet" href="{{ "/_assets/css/" | url }}light.css?ref={{ site.buildTime.getTime() }}" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+    <link rel="stylesheet" href="{{ "/_assets/css/" | url }}dark.css?ref={{ site.buildTime.getTime() }}" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="https://use.typekit.net/itz0kxv.css">
+    <script type="module" src="{{ "/_assets/js/" | url }}color-theme.js"></script>
   </head>
   <body id="top" itemscope itemtype="http://schema.org/WebPage">
     <div class="site-content | hPad">

@@ -1,4 +1,2 @@
-// eslint-disable-next-line import/extensions
-import initColorTheme from './modules/color-theme-toggles/color-theme-toggles.js'
-
-initColorTheme()
+// eslint-disable-next-line no-unused-vars
+import * as DarkModeToggle from './modules/dark-mode-toggle/dist/dark-mode-toggle.min.mjs'

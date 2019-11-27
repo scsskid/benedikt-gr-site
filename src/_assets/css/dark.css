@@ -1,0 +1,12 @@
+html {
+  -webkit-font-smoothing: antialiased;
+
+  --color-text: hsl(var(--hue-main), 20%, 70%);
+  --color-text--high-contrast: hsl(var(--hue-main), 20%, 90%);
+  --color-text--low-contrast: hsl(var(--hue-main), 10%, 50%);
+  --color-background: hsl(var(--hue-main), 10%, 10%);
+
+  /* Button */
+  --button-box-shadow: inset 0 0 0 1px currentColor;
+  --button-background-color: transparent;
+}

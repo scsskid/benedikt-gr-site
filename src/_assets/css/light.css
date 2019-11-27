@@ -1,0 +1,10 @@
+html {
+  --color-text: hsl(var(--hue-main), 10%, 25%);
+  --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
+  --color-text--low-contrast: var(--color-text);
+  --color-background: hsl(var(--hue-main), 51%, 98.5%);
+
+  /* Button */
+  --button-box-shadow: 0 1px 4px -2px hsla(var(--hue-main), 0%, 2%, 0.4);
+  --button-background-color: #fff;
+}
