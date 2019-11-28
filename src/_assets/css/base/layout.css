@@ -32,8 +32,10 @@ body {
 }
 
 .hPad {
-  padding-left: 1.6rem;
-  padding-right: 1.6rem;
+  --padding: 0.8rem;
+
+  padding-left: var(--padding);
+  padding-right: var(--padding);
 }
 
 .site-footer {
