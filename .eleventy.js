@@ -35,6 +35,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(svgContents)
 
+  // Add Collections
+
   // eleventyConfig.addCollection('posts', collection => {
   //   return collection.getFilteredByGlob('src/notes/*.md').sort((a, b) => b.date - a.date)
   // })
@@ -45,6 +47,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection('posts', collection => {
     return [...collection.getFilteredByGlob('./src/posts/*.md').filter(posts)].reverse()
   })
+
+  // Add Filters
 
   eleventyConfig.addFilter('markdown', string => {
     return md.renderInline(string)
@@ -90,10 +94,19 @@ module.exports = function(eleventyConfig) {
     return path
   })
 
+  // Add Shortcodes and Tags
+  let md = new markdownIt()
+  eleventyConfig.addPairedShortcode('intro', string => {
+    return `<div class="intro">${md.renderInline(string)}</div>`
+  })
+
+  // Base
+
   return {
     dir: { input: 'src', output: 'dist', data: '_data' },
 
     templateFormats: ['njk', 'md', 'html', 'yml'],
-    htmlTemplateEngine: 'njk'
+    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk'
   }
 }
