@@ -50,7 +50,7 @@ a {
 
 It's a similar approach like writing modern javascript for the browser.
 
-Like [@babel/preset-env](https://babeljs.io/docs/en/next/babel-preset-env.html), there is a [postcss-preset-env](https://github.com/csstools/postcss-preset-env), which convieniently lets you polyfill missing css browser features, without having to put too much though into which single features you want to use. You also can use a [browserslist](https://github.com/browserslist/browserslist) query to let postcss-preset-env figure out how to transform the css for backwards compatibility.
+Like [@babel/preset-env](https://babeljs.io/docs/en/next/babel-preset-env.html), there is a [postcss-preset-env](https://github.com/csstools/postcss-preset-env), which conveniently lets you polyfill missing css browser features, without having to put too much though into which single features you want to use. You also can use a [browserslist](https://github.com/browserslist/browserslist) query to let postcss-preset-env figure out how to transform the css for backwards compatibility.
 
 Maybe it's old news for you, but it came to me as a surprise: The code above is actually modern css as intended by the [CSS Working Group](https://www.w3.org/Style/CSS/members.en).
 
