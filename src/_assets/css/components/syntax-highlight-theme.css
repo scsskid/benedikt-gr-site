@@ -25,7 +25,7 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: hsla(220, 20%, 14%, 1);
+  background: var(--color-background--high-contrast);
 }
 
 /* Inline code */
