@@ -1,7 +1,12 @@
 /* Colors --------------- */
+@define-mixin commonColorProperties {
+  --hue-main: 220;
+  --hue-accent: 238;
+  --color-link: hsl(var(--hue-accent), 75%, 60%);
+  --color-almost-white: hsl(var(--hue-accent), 75%, 99%);
+}
 
 @define-mixin lightColorProperties {
-  /* Light Properties */
   --color-text: hsl(var(--hue-main), 10%, 25%);
   --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
   --color-text--low-contrast: var(--color-text);
@@ -13,9 +18,7 @@
 }
 
 @define-mixin darkColorProperties {
-  -webkit-font-smoothing: antialiased;
-
-  --color-text: hsl(var(--hue-main), 20%, 70%);
+  --color-text: hsl(var(--hue-main), 20%, 80%);
   --color-text--high-contrast: hsl(var(--hue-main), 20%, 90%);
   --color-text--low-contrast: hsl(var(--hue-main), 10%, 50%);
   --color-background: hsl(var(--hue-main), 15%, 12%);
@@ -26,21 +29,21 @@
 }
 
 html {
-  --hue-main: 220;
-  --hue-accent: 238;
-  --color-link: hsl(var(--hue-accent), 75%, 60%);
-  --color-almost-white: hsl(var(--hue-accent), 75%, 99%);
-
+  @mixin commonColorProperties;
   @mixin lightColorProperties;
 }
 
 @media (prefers-color-scheme: dark) {
   html {
+    -webkit-font-smoothing: antialiased;
+
     @mixin darkColorProperties;
   }
 }
 
 [data-color-theme='dark'] {
+  -webkit-font-smoothing: antialiased;
+
   @mixin darkColorProperties;
 }
 
