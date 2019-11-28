@@ -1,5 +1,4 @@
 @import '../../../node_modules/modern-normalize/modern-normalize.css';
-@import '../../../node_modules/prism-themes/themes/prism-atom-dark.css';
 @import 'base/global.css';
 @import 'base/aria.css';
 @import 'base/typography.css';
@@ -12,3 +11,4 @@
 @import 'components/posts-list.css';
 @import 'components/post.css';
 @import 'components/colophon.css';
+@import 'components/syntax-highlight-theme.css';
