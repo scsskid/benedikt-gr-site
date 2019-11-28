@@ -3,9 +3,15 @@ title: The Joy Of postCSS
 date: '2019-11-19'
 draft: false
 ---
-I used to love SASS.  I think it pushed the standards teams and browser vendors to implement new features like _custom properties_ or _css grid_ more rapidly.
+{% intro "md" %}
 
-But it has been more that a year that I started a new project with SASS for preprocessing my css. At one time I wanted to try how far you can take it with vanilla modern CSS these days. My experience: Pretty far, but then there are real world problems like backwards compatibility.
+It has been more that a year that I started a new project with SASS for preprocessing my css. At one time I wanted to try how far you can take it with vanilla modern CSS these days. 
+
+{% endintro %}
+
+My experience: Pretty far, but then there are real world problems like backwards compatibility.
+
+I used to love SASS.  I think it pushed the standards teams and browser vendors to implement new features like _custom properties_ or _css grid_ more rapidly.
 
 I like the philosphy of postCSS to honor the w3c specicifications and to encourage you to write standard css syntax, even if the specific syntaxes are an early stage and are maybe going to be only implemented in nightly browser builds for now.
 
