@@ -16,13 +16,13 @@
         .replace(/\bno-js\b/g, '') + 'has-js ';
     </script>
   </head>
-  <body id="top" itemscope itemtype="http://schema.org/WebPage">
+  <body id="top" itemscope itemtype="http://schema.org/WebPage" class="layout-{{ layout | baseName }}">
     <div class="site-content | hPad">
       <p class="site-branding">
           <a href="/">BG</a>
       </p>
       <div class="entry-body">
-        <h1 class="main-title">{{ title | safe }}</h1>
+        
         {{ content | safe }}
       </div>
     </div>

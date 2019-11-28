@@ -46,4 +46,8 @@ body {
   .page {
     padding-top: 4rem;
   }
+
+  .entry-body {
+    padding-top: 2rem;
+  }
 }

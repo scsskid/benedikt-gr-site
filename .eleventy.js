@@ -9,6 +9,7 @@ const markdownItContainer = require('markdown-it-container')
 const markdownItFootnote = require('markdown-it-footnote')
 const stringify = require('javascript-stringify').stringify
 const util = require('util')
+const path = require('path')
 
 const markdownItConfig = {
   html: true,
@@ -34,6 +35,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(svgContents)
 
+  // Add Collections
+
   // eleventyConfig.addCollection('posts', collection => {
   //   return collection.getFilteredByGlob('src/notes/*.md').sort((a, b) => b.date - a.date)
   // })
@@ -44,6 +47,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection('posts', collection => {
     return [...collection.getFilteredByGlob('./src/posts/*.md').filter(posts)].reverse()
   })
+
+  // Add Filters
 
   eleventyConfig.addFilter('markdown', string => {
     return md.renderInline(string)
@@ -58,6 +63,10 @@ module.exports = function(eleventyConfig) {
     const inspectedObj = util.inspect(obj, { depth: 1 })
     const output = stringify(inspectedObj, null, '\t', { maxDepth: 1 })
     return `<script>console.log(${output})</script>`
+  })
+
+  eleventyConfig.addFilter('baseName', string => {
+    return path.basename(string, '.njk')
   })
 
   eleventyConfig.addFilter('decodeHtmlEntities', string => {
@@ -85,10 +94,19 @@ module.exports = function(eleventyConfig) {
     return path
   })
 
+  // Add Shortcodes and Tags
+  let md = new markdownIt()
+  eleventyConfig.addPairedShortcode('intro', string => {
+    return `<div class="intro">${md.renderInline(string)}</div>`
+  })
+
+  // Base
+
   return {
     dir: { input: 'src', output: 'dist', data: '_data' },
 
     templateFormats: ['njk', 'md', 'html', 'yml'],
-    htmlTemplateEngine: 'njk'
+    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk'
   }
 }
