@@ -5,7 +5,7 @@ title: Nice to<br>meet you.
 
 
 
-I'm __Benedikt__, a web developer based in Berlin, Germany.
+I'm Benedikt, a web developer based in Berlin, Germany.
 
 You can read more [about me](about/) or look at [my articles](notes/), which are rather quick notes or links than blog posts.
 
