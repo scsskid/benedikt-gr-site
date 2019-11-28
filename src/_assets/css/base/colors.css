@@ -4,6 +4,7 @@
   --hue-accent: 238;
   --color-link: hsl(var(--hue-accent), 75%, 60%);
   --color-almost-white: hsl(var(--hue-accent), 75%, 99%);
+  --color-background--high-contrast: hsl(220, 20%, 14%);
 }
 
 @define-mixin lightColorProperties {
