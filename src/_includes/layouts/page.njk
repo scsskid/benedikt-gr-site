@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+---
+{% set post = page %}
+<header class="post-header">
+  <h1 class="main-title">{{ title | safe }}</h1>
+</header>
+{{ content | safe }}
+
