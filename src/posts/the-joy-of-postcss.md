@@ -21,7 +21,8 @@ Like [@babel/preset-env](https://babeljs.io/docs/en/next/babel-preset-env.html),
 
 Maybe it's old news for you, but it came to as a surprise, but the following code is actually modern css as intended by the [CSS Working Group](https://www.w3.org/Style/CSS/members.en):
 
-```
+
+```css
 @custom-media --viewport-medium (width <= 50rem);
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;
 

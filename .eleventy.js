@@ -10,30 +10,23 @@ const markdownItFootnote = require('markdown-it-footnote')
 const stringify = require('javascript-stringify').stringify
 const util = require('util')
 const path = require('path')
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 
 const markdownItConfig = {
   html: true,
   breaks: true,
-  linkify: false
+  linkify: true,
+  typographer: true
 }
-const markdownItAnchorConfig = {
-  permalink: true,
-  permalinkClass: 'bookmark',
-  permalinkSymbol: '#'
-}
-
-const md = markdownIt(markdownItConfig)
-  .use(markdownItFootnote)
-  .use(markdownItAttrs)
-  .use(markdownItContainer, 'note')
-  .use(markdownItContainer, 'table-wrapper')
-  .use(markdownItAnchor, markdownItAnchorConfig)
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.setLibrary('md', markdownIt(markdownItConfig))
+
   eleventyConfig.addPassthroughCopy('src/_assets/js')
   eleventyConfig.addPassthroughCopy('src/.htaccess')
 
   eleventyConfig.addPlugin(svgContents)
+  eleventyConfig.addPlugin(syntaxHighlight)
 
   // Add Collections
 
@@ -50,9 +43,9 @@ module.exports = function(eleventyConfig) {
 
   // Add Filters
 
-  eleventyConfig.addFilter('markdown', string => {
-    return md.renderInline(string)
-  })
+  // eleventyConfig.addFilter('markdown', string => {
+  //   return md.renderInline(string)
+  // })
 
   eleventyConfig.addFilter('console', function(value) {
     const output = stringify(value, null, '\t', { maxDepth: 2 })
@@ -84,14 +77,6 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('markdown', string => {
     return md.renderInline(string)
-  })
-
-  // Match Firebase’s `cleanUrls` setting.
-  eleventyConfig.addFilter('clean', path => {
-    if (path === '/') return path
-    if (path === 'https://v8.dev/') return path
-    if (path.endsWith('/')) return path.slice(0, -1)
-    return path
   })
 
   // Add Shortcodes and Tags

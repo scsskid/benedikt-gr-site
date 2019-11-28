@@ -1,5 +1,5 @@
 .entry-body pre {
-  overflow-x: auto;
+  /* overflow-x: auto; */
   -webkit-overflow-scrolling: touch;
   padding-bottom: calc(4 * var(--b));
   font-size: calc(var(--ms-neg-2) * 1rem);
