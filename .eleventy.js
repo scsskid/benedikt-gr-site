@@ -9,6 +9,7 @@ const markdownItContainer = require('markdown-it-container')
 const markdownItFootnote = require('markdown-it-footnote')
 const stringify = require('javascript-stringify').stringify
 const util = require('util')
+const path = require('path')
 
 const markdownItConfig = {
   html: true,
@@ -58,6 +59,10 @@ module.exports = function(eleventyConfig) {
     const inspectedObj = util.inspect(obj, { depth: 1 })
     const output = stringify(inspectedObj, null, '\t', { maxDepth: 1 })
     return `<script>console.log(${output})</script>`
+  })
+
+  eleventyConfig.addFilter('baseName', string => {
+    return path.basename(string, '.njk')
   })
 
   eleventyConfig.addFilter('decodeHtmlEntities', string => {
