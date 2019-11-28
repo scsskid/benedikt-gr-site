@@ -17,4 +17,5 @@
   font-size: calc(var(--ms-1) * 1rem);
   line-height: calc(7 * var(--b));
   margin-bottom: calc(6 * var(--b));
+  color: var(--color-text--high-contrast);
 }
