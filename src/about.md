@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.njk
-title: Hypemachine
+title: About me
 ---
 
 While digging modern development workflows, I try to avoid complexity and bloat.
