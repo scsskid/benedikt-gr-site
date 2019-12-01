@@ -1,4 +1,4 @@
-/* Vars -------------- */
+/* Vars --------------------- */
 
 html {
   --outer-gutters: 0.8rem;
@@ -10,7 +10,7 @@ html {
   }
 }
 
-/* General -------------- */
+/* General  ----------------- */
 
 a {
   text-decoration: none;
@@ -29,4 +29,28 @@ a {
 
 .reading-time {
   display: none;
+}
+
+/* Scrollbars  -------------- */
+
+:root {
+  --scrollbar-thickness: 0.35rem;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100px;
+
+  /* background-color: var(--color-background--high-contrast); */
+  background-color: var(--color-text--low-contrast);
+}
+
+::-webkit-scrollbar {
+  border-radius: 100px;
+  width: var(--scrollbar-thickness);
+  height: var(--scrollbar-thickness);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: var(--color-link);
 }
