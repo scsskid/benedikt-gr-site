@@ -50,6 +50,7 @@ code {
 .main-title {
   font-size: calc(var(--ms-3) * 1rem);
   margin-bottom: calc(6 * var(--b));
+  line-height: calc(8 * var(--b));
 }
 
 .hero-title {

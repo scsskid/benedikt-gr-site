@@ -17,15 +17,17 @@
     </script>
   </head>
   <body id="top" itemscope itemtype="http://schema.org/WebPage" class="layout-{{ layout | baseName }}">
-    <div class="site-content | hPad">
-      <p class="site-branding">
-          <a href="/">BG</a>
-      </p>
-      <div class="entry-body">
-        
-        {{ content | safe }}
+    <div class="page">
+      <div class="site-content | hPad">
+        <p class="site-branding">
+            <a href="/">BG</a>
+        </p>
+        <div class="entry-body">
+          
+          {{ content | safe }}
+        </div>
       </div>
+      {% include "layouts/_site-footer.njk" %}
     </div>
-    {% include "layouts/_site-footer.njk" %}
   </body>
 </html>

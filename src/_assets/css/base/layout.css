@@ -11,16 +11,23 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.page {
+  max-width: 100%;
 }
 
 .site-content,
 .site-footer {
-  width: 100vw;
   padding-top: 2rem;
   padding-bottom: 0;
-  max-width: 30rem;
+  max-width: 30em;
   margin-left: auto;
   margin-right: auto;
+}
+
+.entry-body {
 }
 
 .site-content {
@@ -43,10 +50,6 @@ body {
 }
 
 @media (min-width: 30rem) {
-  .page {
-    padding-top: 4rem;
-  }
-
   .entry-body {
     padding-top: 2rem;
   }
