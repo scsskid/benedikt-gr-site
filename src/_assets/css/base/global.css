@@ -1,3 +1,15 @@
+/* Vars -------------- */
+
+html {
+  --outer-gutters: 0.8rem;
+}
+
+@media (min-width: 38em) {
+  html {
+    --outer-gutters: 2rem;
+  }
+}
+
 /* General -------------- */
 
 a {

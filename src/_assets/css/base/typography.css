@@ -43,6 +43,10 @@ h3 {
   font-size: 1rem;
 }
 
+code {
+  font-size: calc(var(--ms-neg-1) * 1rem);
+}
+
 .main-title {
   font-size: calc(var(--ms-3) * 1rem);
   margin-bottom: calc(6 * var(--b));
