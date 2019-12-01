@@ -7,11 +7,11 @@ draft: false
 
 {% intro "md" %}
 
-money_format() is deprecated starting with PHP 7.4. Use NumberFormatter Class instead.
+_money_format()_ is deprecated starting with PHP 7.4. Use NumberFormatter Class instead.
 
 {% endintro %}
 
-I recently switched to an new machine, so I setup my local environment again. Brew provided PHP@7.4, so I ran into a deprecation Error.
+I recently switched to an new machine 🔥, so I installed my local dev environment again. Brew provided 7.4, so I ran into a deprecation Error in an older poject.
 
 The solution is fairly simple:
 
