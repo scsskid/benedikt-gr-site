@@ -13,7 +13,7 @@ A small boilerplate for quick javascript tryouts without codepen.io or similar s
 
 Due to being unemployed with only little freelancing on the side, I'm taking some courses at https://frontendmasters.com.
 
-For little tryouts I used codepen.io before, but since I'm so used to linting (eslint) and auto formatting (prettier), I quickly spinned up a boilerplate.
+For little tryouts along the lessons I used codepen.io before, but since I'm so used to linting (eslint) and auto formatting (prettier), I quickly spinned up a boilerplate.
 
 If you are using vscode with according plugins, linting and formatting should work out of the box, the configs are stored in `package.json`
 
