@@ -1,9 +1,59 @@
+/* Colors --------------- */
+@define-mixin commonColorProperties {
+}
+
+@define-mixin lightColorProperties {
+  --color-code-string: hsl(93, 80%, 29%);
+  --color-code-function: hsl(53, 73%, 30%);
+  --color-code-constant: hsl(120, 40%, 50%);
+  --color-code-variable: hsl(241, 97%, 68%);
+  --color-code-keyword: hsl(209, 98%, 59%);
+  --color-code-punctuation: hsl(140, 3%, 68%);
+  --color-code-class-name: hsl(60, 40%, 46%);
+  --color-code-operator: hsl(140, 3%, 68%);
+}
+
+@define-mixin darkColorProperties {
+  --color-code-string: hsl(93, 100%, 69%);
+  --color-code-function: hsl(53, 53%, 69%);
+  --color-code-constant: hsl(120, 33%, 70%);
+  --color-code-variable: hsl(241, 97%, 88%);
+  --color-code-keyword: hsl(209, 98%, 79%);
+  --color-code-punctuation: hsl(140, 3%, 78%);
+  --color-code-class-name: hsl(60, 100%, 86%);
+  --color-code-operator: hsl(0, 0%, 93%);
+}
+
+html {
+  @mixin commonColorProperties;
+  @mixin lightColorProperties;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    -webkit-font-smoothing: antialiased;
+
+    @mixin darkColorProperties;
+  }
+}
+
+[data-color-theme='dark'] {
+  -webkit-font-smoothing: antialiased;
+
+  @mixin darkColorProperties;
+}
+
+[data-color-theme='light'] {
+  @mixin lightColorProperties;
+}
+
 /* !Todo: refactor/seperate colors and layout */
 
 code[class*='language-'],
 pre[class*='language-'] {
-  color: #c5c8c6;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  /* color: #c5c8c6; */
+
+  /* text-shadow: 0 1px rgba(0, 0, 0, 0.3); */
   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
   text-align: left;
   tab-size: 2;
@@ -31,7 +81,8 @@ pre code {
 :not(pre) > code {
   padding: 0.5rem 0.5rem;
   margin: 0 0.25rem;
-  color: var(--color-text--high-contrast);
+
+  /* color: var(--color-text--high-contrast); */
 
   /* background: red !important; */
 }
@@ -44,7 +95,7 @@ pre code {
 }
 
 .token.punctuation {
-  color: #c5c8c6;
+  color: var(--color-code-punctuation);
 }
 
 .namespace {
@@ -54,17 +105,17 @@ pre code {
 .token.property,
 .token.keyword,
 .token.tag {
-  color: #96cbfe;
+  color: var(--color-code-keyword);
 }
 
 .token.class-name {
-  color: #ffffb6;
+  color: var(--color-code-class-name);
   text-decoration: underline;
 }
 
 .token.boolean,
 .token.constant {
-  color: #9c9;
+  color: var(--color-code-constant);
 }
 
 .token.symbol,
@@ -82,15 +133,15 @@ pre code {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #a8ff60;
+  color: var(--color-code-string);
 }
 
 .token.variable {
-  color: #c6c5fe;
+  color: var(--color-code-variable);
 }
 
 .token.operator {
-  color: #ededed;
+  color: var(--color-code-operator);
 }
 
 .token.entity {
@@ -114,7 +165,7 @@ pre code {
 }
 
 .token.function {
-  color: #dad085;
+  color: var(--color-code-function);
 }
 
 .token.regex {
