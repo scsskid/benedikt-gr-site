@@ -12,6 +12,7 @@
   --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
   --color-text--low-contrast: var(--color-text);
   --color-background: hsl(var(--hue-main), 7%, 97.5%);
+  --color-background--high-contrast: hsl(220, 20%, 95%);
 
   /* Button */
   --button-box-shadow: 0 1px 4px -2px hsla(var(--hue-main), 0%, 2%, 0.4);
