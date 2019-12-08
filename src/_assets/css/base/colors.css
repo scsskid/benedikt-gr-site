@@ -4,7 +4,6 @@
   --hue-accent: 238;
   --color-link: hsl(var(--hue-accent), 75%, 60%);
   --color-almost-white: hsl(var(--hue-accent), 75%, 99%);
-  --color-background--high-contrast: hsl(220, 20%, 14%);
 }
 
 @define-mixin lightColorProperties {
@@ -24,6 +23,7 @@
   --color-text--high-contrast: hsl(var(--hue-main), 20%, 90%);
   --color-text--low-contrast: hsl(var(--hue-main), 10%, 50%);
   --color-background: hsl(var(--hue-main), 15%, 12%);
+  --color-background--high-contrast: hsl(220, 20%, 14%);
 
   /* Button */
   --button-box-shadow: inset 0 0 0 1px currentColor;
