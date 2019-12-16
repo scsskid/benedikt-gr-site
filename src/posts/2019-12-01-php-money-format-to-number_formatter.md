@@ -33,7 +33,7 @@ $amount = new \NumberFormatter( 'de_DE', \NumberFormatter::CURRENCY );
 return $amount->format( 2499 );
 // 2.499,00 €
 ```
-Addionally I needed to maintain the amount's display without decimals so I had to rewrite
+Additionally I needed to maintain the amount's display without decimals so I had to rewrite
 
 ```php
 setlocale( LC_MONETARY, 'de_DE.UTF-8' );
