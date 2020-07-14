@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Benedikt Gregors Website',
+  title: 'Benedikt Gregor Nützel - Webdeveloper Berlin',
   description: '',
   url: 'https://benedikt.gr',
   urls: {
