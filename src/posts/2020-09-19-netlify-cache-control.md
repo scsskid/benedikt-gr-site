@@ -14,7 +14,7 @@ I recently moved to self-hosting my webfonts for my personal site and encountere
 
 Turned out Netflify [applies custom caching rules in their CDN](https://www.netlify.com/blog/2017/02/23/better-living-through-caching/).
 
-They apperently set `cache-control: max-age=0` for most files but also keep possibility of caching without further configuration.
+They apparently set `cache-control: max-age=0` for most files but also keep possibility of caching without further configuration.
 
 If you want to control the caching by yourself to can set some [Header Rules](https://docs.netlify.com/routing/headers/):
 
