@@ -23,6 +23,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownIt(markdownItConfig))
 
   eleventyConfig.addPassthroughCopy('src/_assets/js')
+  eleventyConfig.addPassthroughCopy('src/_assets/fonts')
   eleventyConfig.addPassthroughCopy({ 'src/webrootfiles/*': '.' })
 
   eleventyConfig.addPlugin(svgContents)
