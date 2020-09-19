@@ -1,0 +1,12 @@
+[[headers]]
+  for = "*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+[[headers]]    
+  for = "*.mjs"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"    
+[[headers]]    
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"    
