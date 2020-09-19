@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ renderData.description or description or data.description }}">
+    <meta name="description" content="{{ site.description }}">
     {# <title>{% if '/' === page.url %}Benedikt Gregor{% else %}{{ page.title | markdown | striptags | decodeHtmlEntities }} · BG{% endif %}</title> #}
     <title>{% if '/' === page.url %}{{ site.title  }} {% else %} {{ title }} · {{ site.title  }}{% endif %}</title>
     <script type="module" src="{{ "/_assets/js/" | url }}color-theme-toggle.mjs"></script>
