@@ -6,6 +6,7 @@
 @import 'base/colors.css';
 @import 'base/layout.css';
 @import 'components/button.css';
+@import 'components/code-blocks.css';
 @import 'components/color-scheme-toggles.css';
 @import 'components/site-footer.css';
 @import 'components/social-links.css';
