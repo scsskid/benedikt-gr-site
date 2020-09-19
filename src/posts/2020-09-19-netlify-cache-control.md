@@ -1,5 +1,5 @@
 ---
-title: Netlify Cache Control
+title: Curb your Netlify's Cache Control
 date: 2020-09-19
 draft: false
 ---
