@@ -20,8 +20,11 @@ html {
 }
 
 body {
-  font-family: 'IBM Plex Sans', Rubik, niveau-grotesk, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+  /* stylelint-disable declaration-colon-newline-after, value-list-comma-newline-after */
+  font-family: 'IBM Plex Sans', Rubik, niveau-grotesk, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  /* stylelint-enable */
   font-size: 1rem;
   line-height: calc(6 * var(--b));
 }
