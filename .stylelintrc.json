@@ -4,8 +4,9 @@
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["onDemand"]
+        "ignoreAtRules": ["mixin", "define-mixin"]
       }
-    ]
+    ],
+    "no-duplicate-selectors": null
   }
 }

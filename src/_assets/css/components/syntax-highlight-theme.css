@@ -1,5 +1,6 @@
 /* Colors --------------- */
 @define-mixin commonColorProperties {
+  /* Nothing */
 }
 
 @define-mixin lightColorProperties {
@@ -50,10 +51,8 @@ html {
 :not(pre) > code,
 pre[class*='language-'] {
   background: var(--color-background--high-contrast);
-  /* background: #fff; */
-}
 
-.token {
+  /* background: #fff; */
 }
 
 .token.comment,
