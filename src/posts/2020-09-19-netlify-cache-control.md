@@ -16,7 +16,7 @@ Turned out Netflify [applies custom caching rules in their CDN](https://www.netl
 
 They apparently set `cache-control: max-age=0` for most files but also keep possibility of caching without further configuration.
 
-If you want to control the caching by yourself to can set some [Header Rules](https://docs.netlify.com/routing/headers/):
+If you want to control caching by yourself to can set some [Header Rules](https://docs.netlify.com/routing/headers/):
 
 ## Example 1:
 
