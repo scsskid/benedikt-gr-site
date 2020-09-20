@@ -1,6 +1,10 @@
 {
   "extends": ["airbnb", "prettier"],
-  "rules": {},
+  "rules": {
+    "func-names": "off",
+    "no-param-reassign": "off",
+    "import/extensions": "off"
+  },
   "env": {
     "node": true,
     "browser": true,

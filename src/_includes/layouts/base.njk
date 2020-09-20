@@ -6,7 +6,7 @@
     <meta name="description" content="{{ site.description }}">
     {# <title>{% if '/' === page.url %}Benedikt Gregor{% else %}{{ page.title | markdown | striptags | decodeHtmlEntities }} · BG{% endif %}</title> #}
     <title>{% if '/' === page.url %}{{ site.title  }} {% else %} {{ title }} · {{ site.title  }}{% endif %}</title>
-    <script type="module" src="{{ "/_assets/js/" | url }}color-theme-toggle.mjs"></script>
+    <script type="module" src="{{ "/_assets/js/" | url }}index.js"></script>
     <link rel="stylesheet" href="{{ "/_assets/css/" | url }}styles.css?ref={{ site.buildTime.getTime() }}">
  
     <script>
@@ -27,7 +27,16 @@
           {{ content | safe }}
         </div>
       </div>
-      {% include "layouts/_site-footer.njk" %}
+      <footer class="site-footer | hPad">
+        {% include "layouts/_color-scheme-toggle.njk" %}
+        {% include "layouts/_social-links.njk" %}
+        <div class="site-colophon | tiny-text">
+          <p>Made with 🐝 in Berlin, Germany</p>
+          <p>Built with <a href="https://11ty.io">Eleventy</a> · Deployed on <a href="https://netlify.com">Netlify</a><br>
+          Last Update: {{ site.buildTimeString }}</p>
+          <p><a href="/legal/">Legal Information</a></p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
