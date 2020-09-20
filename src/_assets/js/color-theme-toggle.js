@@ -1,5 +1,4 @@
 function Switcher(el) {
-  this.state = { active: false, theme: 'auto' };
   this.el = el;
 }
 
