@@ -1,8 +1,9 @@
 {
-  "extends": ["plugin:prettier/recommended"],
-  "plugins": ["prettier"],
+  "extends": ["airbnb", "prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "func-names": "off",
+    "no-param-reassign": "off",
+    "import/extensions": "off"
   },
   "env": {
     "node": true,
