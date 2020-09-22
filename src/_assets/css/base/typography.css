@@ -66,6 +66,25 @@ code {
   max-width: 34em;
 }
 
+.post-header {
+  margin-bottom: calc(4 * var(--b));
+}
+
+.page-header {
+  margin-bottom: calc(6 * var(--b));
+}
+
+.intro {
+  margin-bottom: calc(4 * var(--b));
+}
+
+.intro p {
+  font-size: calc(var(--ms-1) * 1rem);
+  line-height: calc(7 * var(--b));
+  margin-bottom: calc(6 * var(--b));
+  color: var(--color-text--high-contrast);
+}
+
 .entry-body :--heading:not(:first-child) {
   margin-top: calc(8 * var(--b));
 }

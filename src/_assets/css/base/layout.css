@@ -27,7 +27,8 @@ body {
   margin-right: auto;
 }
 
-.entry-body {
+.section:not(:last-child) {
+  margin-bottom: calc(8 * var(--b));
 }
 
 .site-content {

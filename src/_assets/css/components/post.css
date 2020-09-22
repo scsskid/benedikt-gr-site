@@ -4,18 +4,3 @@
   padding-bottom: calc(4 * var(--b));
   font-size: calc(var(--ms-neg-2) * 1rem);
 }
-
-.post-header {
-  margin-bottom: calc(4 * var(--b));
-}
-
-.intro {
-  margin-bottom: calc(4 * var(--b));
-}
-
-.intro p {
-  font-size: calc(var(--ms-1) * 1rem);
-  line-height: calc(7 * var(--b));
-  margin-bottom: calc(6 * var(--b));
-  color: var(--color-text--high-contrast);
-}

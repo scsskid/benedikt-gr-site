@@ -1,10 +1,11 @@
 ---
 layout: layouts/base.njk
 ---
-{% set post = page %}
-<header class="post-header">
-  <h1 class="main-title">{{ title | safe }}</h1>
-  <p class="meta-text"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> <span class="reading-time">{{ helpers.getReadingTime(content) }}m</span></p>
-</header>
+<div class="entry-body">
+  <header class="post-header">
+    <h1 class="main-title">{{ title | safe }}</h1>
+    <p class="meta-text"><time datetime="{{ post.date | htmlDateString }}">{{ page.date | readableDate }}</time> <span class="reading-time">{{ helpers.getReadingTime(content) }}m</span></p>
+  </header>
+</div>
 {{ content | safe }}
 
