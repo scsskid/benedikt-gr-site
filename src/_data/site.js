@@ -9,7 +9,6 @@ module.exports = {
     twitter: 'https://twitter.com/scsskid/',
   },
   baseUrl: '/',
-  author: 'Name Surname',
   authorTwitterUrl: 'https://twitter.com/scsskid',
   authorTwitterHandle: '@scsskid',
   buildTime: new Date(),

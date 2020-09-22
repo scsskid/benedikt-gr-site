@@ -4,8 +4,7 @@ date: 2019-12-05
 draft: false
 ---
 
-
-{% intro "md" %}
+{% intro %}
 
 A small boilerplate for quick javascript tryouts without codepen.io or similar services
 
@@ -19,4 +18,3 @@ If you are using vscode with according plugins, linting and formatting should wo
 
 Take a look here:
 https://github.com/scsskid/js-playground
-

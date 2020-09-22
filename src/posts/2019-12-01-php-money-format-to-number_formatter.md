@@ -4,8 +4,7 @@ date: 2019-12-01
 draft: false
 ---
 
-
-{% intro "md" %}
+{% intro %}
 
 _money_format()_ is deprecated starting with PHP 7.4. Use NumberFormatter Class instead.
 
@@ -33,6 +32,7 @@ $amount = new \NumberFormatter( 'de_DE', \NumberFormatter::CURRENCY );
 return $amount->format( 2499 );
 // 2.499,00 €
 ```
+
 Additionally I needed to maintain the amount's display without decimals so I had to rewrite
 
 ```php
@@ -42,6 +42,7 @@ $amount = money_format( '%!n €', 2499 );
 return preg_replace( '/[,]00/', '', strval( $amount ) );
 // 2.499 €
 ```
+
 to
 
 ```php

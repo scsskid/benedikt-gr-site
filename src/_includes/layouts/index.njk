@@ -1,9 +1,26 @@
 ---
 layout: layouts/base.njk
+aboutPage: collections.about[0].data
 ---
-<h1 class="main-title">{{ title | safe }}</h1>
-{{ content | safe }}
 
-<h1>Quick Notes</h1>
-{% include 'layouts/_posts-list.njk' %}
-<p><a href="{{ '/notes/' | url }}">all notes →</a></p>
+<main class="entry-body | section">
+  <header class="page-header">
+    <h1 class="main-title">{{ title | safe }}</h1>
+  </header>
+  {{ content | safe }}
+</main>
+
+<section class="home-notes | section">
+  <h1>Quick Notes</h1>
+  {% include 'layouts/_posts-list.njk' %}
+  <p><a href="{{ '/notes/' | url }}">all notes →</a></p>
+</section>
+
+{% set aboutPage = collections.about[0] %}
+<section class="home-about | section">
+  <h1>{{ aboutPage.data.title }}</h1>
+  {{ aboutPage.data.excerpt | markdown | safe }}
+  <p><a href="{{ aboutPage.url }}"><b>Read More</b></a></p>
+</section>
+
+{{ "**[Contact me](mailto:mail@benedikt.gr)**" | markdown | safe }}

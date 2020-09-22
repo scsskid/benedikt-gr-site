@@ -1,9 +1,12 @@
 ---
 layout: layouts/page.njk
-title: On the subject of me
+title: On the Subject of Me
+tags: about
+excerpt: |
+  I'm a web developer based in Berlin, currently focused on Javascript development and static sites.
 ---
 
-{% intro "md" %}
+{% intro %}
 
 As a Web Developer I focus on HTML, CSS and Javascript as it specifically pertains to the UI of apps and sites.
 

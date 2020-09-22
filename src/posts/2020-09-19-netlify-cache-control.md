@@ -4,7 +4,7 @@ date: 2020-09-19
 draft: false
 ---
 
-{% intro "md" %}
+{% intro %}
 
 Since [Netlify](https://netlify.com/) doesn't deal with .htaccess files, you need special instructions to tune caching options.
 

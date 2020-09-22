@@ -2,7 +2,7 @@ const svgContents = require('eleventy-plugin-svg-contents');
 const { DateTime } = require('luxon');
 const markdownIt = require('markdown-it');
 const stringify = require('javascript-stringify').stringify;
-const util = require('util');
+// const util = require('util');
 const path = require('path');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
@@ -13,9 +13,9 @@ const markdownItConfig = {
   typographer: true,
 };
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.setLibrary('md', markdownIt(markdownItConfig));
+const md = new markdownIt(markdownItConfig);
 
+module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/_assets/js');
   eleventyConfig.addPassthroughCopy('src/_assets/fonts');
   eleventyConfig.addPassthroughCopy({ 'src/webrootfiles/*': '.' });
@@ -58,15 +58,20 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat('dd LLL yyyy');
   });
 
-  eleventyConfig.addFilter('markdown', (string) => {
-    return md.renderInline(string);
-  });
+  eleventyConfig.addFilter('markdown', (string) => md.render(string));
+  eleventyConfig.addFilter('markdownInline', (string) =>
+    md.renderInline(string)
+  );
 
   // Add Shortcodes and Tags
-  let md = new markdownIt();
+
   eleventyConfig.addPairedShortcode('intro', (string) => {
-    return `<div class="intro">${md.renderInline(string)}</div>`;
+    return `<div class="intro">${md.render(string)}</div>`;
   });
+
+  // eleventyConfig.addPairedShortcode('markdown', (string) => {
+  //   return md.render(string);
+  // });
 
   // Base
 
