@@ -63,7 +63,11 @@ code {
 }
 
 .entry-body p {
-  max-width: 26em;
+  max-width: 34em;
+}
+
+.entry-body :--heading:not(:first-child) {
+  margin-top: calc(8 * var(--b));
 }
 
 .tiny-text {

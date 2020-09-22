@@ -19,7 +19,7 @@
 }
 
 @define-mixin darkColorProperties {
-  --color-text: hsl(var(--hue-main), 20%, 80%);
+  --color-text: hsl(var(--hue-main), 15%, 80%);
   --color-text--high-contrast: hsl(var(--hue-main), 20%, 90%);
   --color-text--low-contrast: hsl(var(--hue-main), 10%, 50%);
   --color-background: hsl(var(--hue-main), 15%, 12%);
