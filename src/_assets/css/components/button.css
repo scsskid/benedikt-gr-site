@@ -14,7 +14,7 @@
   /* font-weight: bold; */
   background: var(--color-link);
   box-shadow: none;
-  color: var(--color-almost-white);
+  color: var(--button-active-color);
 
   /* -webkit-font-smoothing: antialiased; */
 }

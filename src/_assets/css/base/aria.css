@@ -1,12 +1,10 @@
 *:focus,
 *:focus + label {
-  outline-width: 2px;
-  outline-style: solid;
-  outline-color: Highlight;
+  outline-color: var(--color-link);
 }
 
-input[type='radio']:focus + label {
-}
+/* input[type='radio']:focus + label {
+} */
 
 @media (-webkit-min-device-pixel-ratio: 0) {
   *:focus,

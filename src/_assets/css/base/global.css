@@ -39,9 +39,7 @@ a {
 
 ::-webkit-scrollbar-track {
   border-radius: 100px;
-
-  /* background-color: var(--color-background--high-contrast); */
-  background-color: var(--color-background--high-contrast);
+  background-color: var(--color-background);
 }
 
 ::-webkit-scrollbar {
