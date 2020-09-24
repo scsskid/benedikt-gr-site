@@ -1,7 +1,7 @@
 /* Colors --------------- */
 @define-mixin commonColorProperties {
   --hue-main: 220;
-  --hue-accent: 235;
+  --hue-accent: 254;
   --color-almost-white: hsl(var(--hue-accent), 75%, 99%);
 }
 
@@ -22,7 +22,7 @@
   --color-text: hsl(var(--hue-main), 15%, 80%);
   --color-text--high-contrast: hsl(var(--hue-main), 20%, 90%);
   --color-text--low-contrast: hsl(var(--hue-main), 15%, 50%);
-  --color-link: hsl(var(--hue-accent), 90%, 70%);
+  --color-link: hsl(var(--hue-accent), 90%, 60%);
   --color-background: hsl(var(--hue-main), 15%, 12%);
   --color-background--high-contrast: hsl(220, 20%, 14%);
 
