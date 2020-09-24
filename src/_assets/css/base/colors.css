@@ -60,7 +60,8 @@ body {
 a {
   color: var(--color-link);
 }
-/* 
+
+/*
 b,
 strong {
   color: var(--color-text--high-contrast);
