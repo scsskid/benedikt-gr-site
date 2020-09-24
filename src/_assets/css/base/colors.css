@@ -9,7 +9,7 @@
   --color-text: hsl(var(--hue-main), 10%, 25%);
   --color-text--high-contrast: hsl(var(--hue-main), 10%, 5%);
   --color-text--low-contrast: var(--color-text);
-  --color-link: hsl(var(--hue-accent), 75%, 60%);
+  --color-link: hsl(var(--hue-accent), 90%, 55%);
   --color-background: hsl(var(--hue-main), 7%, 97.5%);
   --color-background--high-contrast: hsl(220, 20%, 95%);
 
