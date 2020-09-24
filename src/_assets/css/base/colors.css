@@ -1,7 +1,7 @@
 /* Colors --------------- */
 @define-mixin commonColorProperties {
   --hue-main: 220;
-  --hue-accent: 238;
+  --hue-accent: 235;
   --color-almost-white: hsl(var(--hue-accent), 75%, 99%);
 }
 
