@@ -14,7 +14,7 @@ As a Web Developer I focus on HTML, CSS and Javascript as it specifically pertai
 
 In my over 10 years as a web developer I mostly positioned myself as a generalist, remember the term _Webdesigner_?
 
-In recent years I learned much more general programming techniques and patterns, and how javascript works under the hood (mosty in the browser). Among others I really enjoyed the courses of [Frontend Masters](https://frontendmasters.com) (Still subscribed).
+In recent years I learned much more general programming techniques and patterns, and how javascript works under the hood. Among others I really enjoyed the courses of [Frontend Masters](https://frontendmasters.com) (Still subscribed).
 
 Always interested in graphic design, I also developed skills in device agnostic UI design and implementation of these designs in web products (see: https://v3.benedikt.gr for example projects).
 
