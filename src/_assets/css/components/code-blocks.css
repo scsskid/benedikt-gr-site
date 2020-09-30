@@ -1,6 +1,6 @@
 code[class*='language-'],
 pre[class*='language-'] {
-  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+  font-family: monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
