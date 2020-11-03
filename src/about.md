@@ -32,6 +32,6 @@ Out of my passionate hate for cars in dense populated cities, I love joining [Cr
 
 ## Contact me
 
-Thanks for your interest in me, you made it to the end, very nice!
+Thanks for your interest in me, you made it to the end, very nice!!
 
 What to do next? You can hit me up on twitter ([@scsskid](https://twitter.com/scsskid)), or drop me an [email](mailto:mail@benedikt.gr).
