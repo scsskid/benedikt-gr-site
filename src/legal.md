@@ -6,11 +6,12 @@ title: Legal Information
 Verantwortlich für den Inhalt dieser Seiten:
 
 Benedikt Gregor Nützel  
-Selkestr. 1  
-12051 Berlin
+
+c/o altmoabit19 Bürogemeinschaft
+Alt-Moabit 19
+10559 Berlin
 
 Email: mail@benedikt.gr  
-Telefon: 030 / 62900540
 
 USt.-IdNr. DE258767884
 
